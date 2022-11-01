@@ -8,11 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace MicroFix
 {
-    public partial class Form1 : Form
+    public partial class frmLogin : MetroFramework.Forms.MetroForm
     {
-        public Form1()
+        public frmLogin()
         {
             InitializeComponent();
         }
