@@ -156,6 +156,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Empresa.cs" />
+    <Compile Include="Model\Microscopio.cs" />
+    <Compile Include="Model\Servico.cs" />
+    <Compile Include="Model\Status.cs" />
     <Compile Include="View\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
