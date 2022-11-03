@@ -11,5 +11,8 @@ namespace MicroFix.Model
         void adicionaMicro(Microscopio m);
         void alteraMicro(Microscopio m);
         void excluiMicro(Microscopio m);
+        IEnumerable<Microscopio> Get(string pesquisa);
+        Microscopio GetMicroscopio(int id);
+        IEnumerable<Microscopio> GetAllMicroscopios();
     }
 }
