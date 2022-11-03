@@ -53,7 +53,7 @@ namespace MicroFix.Repository
             cmd.ExecuteNonQuery();
             conn.Close();
         }
-        public IEnumerable<Status> GetStatusyIdMicroscopio(int IdMicroscopio)
+        public IEnumerable<Status> GetStatusByIdMicroscopio(int IdMicroscopio)
         {
             SqlConnection conn = new SqlConnection();
             conn.ConnectionString = "Server =DESKTOP-0G0JKVA;Database=MicroFix;UID=mairon;PWD=123";

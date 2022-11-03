@@ -11,7 +11,7 @@ namespace MicroFix.Model
         void adicionaStatus(Status s);
         void alteraStatus(Status s);
         void excluiStatus(Status s);
-        IEnumerable<Status> GetStatusyIdMicroscopio(int IdMicroscopio);
+        IEnumerable<Status> GetStatusByIdMicroscopio(int IdMicroscopio);
         IEnumerable<Status> GetStatusByIdServico(int IdServico);
         Status GetStatus(int id);
         IEnumerable<Status> GetAllStatus();
