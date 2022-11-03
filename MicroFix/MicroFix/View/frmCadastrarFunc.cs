@@ -8,22 +8,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
-namespace MicroFix
+namespace MicroFix.View
 {
-    public partial class frmLogin : MetroFramework.Forms.MetroForm
+    public partial class frmCadastrarFunc : MetroFramework.Forms.MetroForm
     {
-        public frmLogin()
+
+
+        //lembrar que IdFunc é string
+        public frmCadastrarFunc()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void frmCadastrar_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

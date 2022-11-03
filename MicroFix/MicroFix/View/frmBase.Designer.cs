@@ -1,6 +1,6 @@
 ﻿namespace MicroFix.View
 {
-    partial class frmMenu
+    partial class frmBase
     {
         /// <summary>
         /// Required designer variable.
@@ -30,17 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // frmMenu
+            // frmBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Name = "frmMenu";
-            this.Text = "Menu";
-            this.TransparencyKey = System.Drawing.Color.Transparent;
-            this.Load += new System.EventHandler(this.frmMenu_Load);
+            this.Name = "frmBase";
+            this.Text = "frmBase";
+            this.Load += new System.EventHandler(this.frmBase_Load);
             this.ResumeLayout(false);
 
         }

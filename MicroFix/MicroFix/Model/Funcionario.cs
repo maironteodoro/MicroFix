@@ -12,13 +12,13 @@ namespace MicroFix.Model
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-
-        private string id;
+        //lembrar que IdFunc é string
+        private string idFunc;
         private string nameFunc;
         private string area;
         private string senha;
 
-        public string Id { get => id; set => id = value; }
+        public string IdFunc { get => idFunc; set => idFunc = value; }
         public string NameFunc { get => nameFunc; set => nameFunc = value; }
         public string Area { get => area; set => area = value; }
         public string Senha { get => senha; set => senha = value; }

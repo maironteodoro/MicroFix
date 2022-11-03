@@ -157,9 +157,31 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Empresa.cs" />
+    <Compile Include="Model\IEmpresa.cs" />
+    <Compile Include="Model\IFunc.cs" />
+    <Compile Include="Model\IMicroscopio.cs" />
+    <Compile Include="Model\IServico.cs" />
+    <Compile Include="Model\IStatus.cs" />
     <Compile Include="Model\Microscopio.cs" />
     <Compile Include="Model\Servico.cs" />
     <Compile Include="Model\Status.cs" />
+    <Compile Include="Repository\REmpresa.cs" />
+    <Compile Include="Repository\RFunc.cs" />
+    <Compile Include="Repository\RMicroscopio.cs" />
+    <Compile Include="Repository\RServico.cs" />
+    <Compile Include="Repository\RStatus.cs" />
+    <Compile Include="View\frmBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmBase.Designer.cs">
+      <DependentUpon>frmBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmCadastrarFunc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmCadastrarFunc.Designer.cs">
+      <DependentUpon>frmCadastrarFunc.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +197,12 @@
     <Compile Include="View\frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\frmBase.resx">
+      <DependentUpon>frmBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmCadastrarFunc.resx">
+      <DependentUpon>frmCadastrarFunc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -210,9 +238,7 @@
     <Content Include="MetroFramework.txt" />
     <Content Include="mongocrypt.dll" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Repository\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MongoDB.Libmongocrypt.1.6.0\build\MongoDB.Libmongocrypt.targets" Condition="Exists('..\packages\MongoDB.Libmongocrypt.1.6.0\build\MongoDB.Libmongocrypt.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
