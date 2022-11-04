@@ -42,12 +42,17 @@ namespace MicroFix
 
         private void button1_Click(object sender, EventArgs e)
         {
-            bool confirmacao = rf.Confirm(txtNome.Text,txtNome.Text);
-            if (confirmacao)
+            bool confirmacao = rf.Confirm(txtNome.Text,txtSenha.Text);
+            if (confirmacao==true)
             {
                 frmMenu frmM = new frmMenu();
                 frmM.ShowDialog();
             }
+            else
+            {
+                MessageBox.Show("Senha ou Nome incorreto. Tente Novamente!","Alerta!",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+            }
         }
     }
+
 }

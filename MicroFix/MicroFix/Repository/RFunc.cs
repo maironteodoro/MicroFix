@@ -14,8 +14,6 @@ namespace MicroFix.Repository
 {
     internal class RFunc : IFunc
     {
-
-
         public void AdicionarFunc(Funcionario f)//lembrar que IdFunc é string // inserção de informações no banco
         {
             ConnectToMongo<Funcionario>().InsertOne(f);
@@ -41,37 +39,38 @@ namespace MicroFix.Repository
             List<Funcionario> Funcionarios = ConnectToMongo<Funcionario>().Find<Funcionario>(filtro).ToList() ;
             return Funcionarios;
         }
-        public Funcionario GetFuncById(string IdFunc)// retorna um funcionario com o id especificado//lembrar que IdFunc é string
+        public List<Funcionario> GetFuncById(string IdFunc)// retorna um funcionario com o id especificado//lembrar que IdFunc é string
         {
             
             var filtro = Builders<Funcionario>.Filter.Where(c => c.IdFunc == IdFunc);
 
-            Funcionario Funcionarios = (Funcionario)ConnectToMongo<Funcionario>().Find<Funcionario>(filtro);
+            List<Funcionario> Funcionarios = ConnectToMongo<Funcionario>().Find<Funcionario>(filtro).ToList();
             return Funcionarios;
         }
-        public Funcionario GetFuncByName(string NomeFunc)// retorna um funcionario com o id especificado
+        public List<Funcionario> GetFuncByName(string NomeFunc)// retorna um funcionario com o id especificado
         {
 
             var filtro = Builders<Funcionario>.Filter.Where(c => c.NomeFunc == NomeFunc);
 
-            Funcionario Funcionarios = (Funcionario)ConnectToMongo<Funcionario>().Find<Funcionario>(filtro);
+            List<Funcionario> Funcionarios =ConnectToMongo<Funcionario>().Find<Funcionario>(filtro).ToList();
             return Funcionarios;
         }
-        public bool Confirm(string Nome,string senha)// retorna um funcionario com o id especificado
+        public bool Confirm(string Nome,string senha)//Confirma login de funcionario
         {
-
-            var filtro = Builders<Funcionario>.Filter.Where(c => c.NomeFunc == Nome);
-            Funcionario Funcionarios = (Funcionario)ConnectToMongo<Funcionario>().Find<Funcionario>(filtro);
-            if (Funcionarios.NomeFunc == Nome)
+            var filtro = Builders<Funcionario>.Filter.Where(c => c.NomeFunc == Nome && c.Senha == senha);
+            var Funcionarios = ConnectToMongo<Funcionario>().Find<Funcionario>(filtro).ToList();
+            foreach (var func in Funcionarios)
             {
-                if(Funcionarios.Senha == senha)
+                if(func.NomeFunc == Nome && func.Senha == senha)
+                {
                     return true;
+                }
             }
             return false;
         }
-        public void AdicionarByHax(Funcionario f, string hax)
+        public void AdicionarById(Funcionario f, string id)
         {
-            var filtro = Builders<Funcionario>.Filter.Where(c => c.IdFunc == hax);
+            var filtro = Builders<Funcionario>.Filter.Where(c => c.IdFunc == id);
             var alteracao = Builders<Funcionario>.Update.Set(c => c.NomeFunc, f.NomeFunc)
                                                         .Set(c => c.Area, "Funcionario")
                                                         .Set(c => c.Senha, f.Senha);
