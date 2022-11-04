@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using MicroFix.Model;
+using MicroFix.Repository;
+using MicroFix.View;
 
 namespace MicroFix
 {
@@ -17,7 +19,7 @@ namespace MicroFix
         {
             InitializeComponent();
         }
-
+        RFunc rf = new RFunc();
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -26,6 +28,26 @@ namespace MicroFix
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            bool confirmacao = rf.Confirm(txtNome.Text,txtNome.Text);
+            if (confirmacao)
+            {
+                frmMenu frmM = new frmMenu();
+                frmM.ShowDialog();
+            }
         }
     }
 }

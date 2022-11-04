@@ -18,6 +18,8 @@ namespace MicroFix.Model
         Funcionario GetFuncByName(string NomeFunc);//Retorna um funcionario pelo nome
         List<Funcionario> GetAllFunc();//Retorna todos os Func's
 
+        bool Confirm(string Nome, string senha); //Confirmação de funcionario
+
 
     }
 
