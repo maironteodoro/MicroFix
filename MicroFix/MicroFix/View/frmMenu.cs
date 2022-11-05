@@ -34,5 +34,11 @@ namespace MicroFix.View
         {
             Close();
         }
+
+        private void btnEmpresa_Click(object sender, EventArgs e)
+        {
+            frmEmpresa fe = new frmEmpresa();
+            fe.ShowDialog();
+        }
     }
 }

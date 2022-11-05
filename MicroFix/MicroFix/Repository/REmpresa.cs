@@ -71,7 +71,7 @@ namespace MicroFix.Repository
                 e.IdEmpresa = int.Parse(dr[0].ToString());
                 e.Nome = dr[1].ToString();
                 e.Localizacao = dr[2].ToString();
-                e.CNPJ = int.Parse(dr[3].ToString());
+                e.CNPJ = dr[3].ToString();
                 e.Email = dr[4].ToString();
                 e.NomeResp = dr[5].ToString();
                 e.Telefone = dr[6].ToString();
@@ -97,7 +97,7 @@ namespace MicroFix.Repository
                 e.IdEmpresa = int.Parse(dr[0].ToString());
                 e.Nome = dr[1].ToString();
                 e.Localizacao = dr[2].ToString();
-                e.CNPJ = int.Parse(dr[3].ToString());
+                e.CNPJ = dr[3].ToString();
                 e.Email = dr[4].ToString();
                 e.NomeResp = dr[5].ToString();
                 e.Telefone = dr[6].ToString();
@@ -122,7 +122,7 @@ namespace MicroFix.Repository
                 e.IdEmpresa = int.Parse(dr[0].ToString());
                 e.Nome = dr[1].ToString();
                 e.Localizacao = dr[2].ToString();
-                e.CNPJ = int.Parse(dr[3].ToString());
+                e.CNPJ = dr[3].ToString();
                 e.Email = dr[4].ToString();
                 e.NomeResp = dr[5].ToString();
                 e.Telefone = dr[6].ToString();

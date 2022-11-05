@@ -268,6 +268,12 @@
     <Compile Include="View\frmCadastrarFunc.Designer.cs">
       <DependentUpon>frmCadastrarFunc.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmEmpresa.Designer.cs">
+      <DependentUpon>frmEmpresa.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -283,8 +289,17 @@
     <Compile Include="View\frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmPesquisaEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmPesquisaEmpresa.Designer.cs">
+      <DependentUpon>frmPesquisaEmpresa.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="View\frmCadastrarFunc.resx">
       <DependentUpon>frmCadastrarFunc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmEmpresa.resx">
+      <DependentUpon>frmEmpresa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -301,6 +316,9 @@
     </Compile>
     <EmbeddedResource Include="View\frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmPesquisaEmpresa.resx">
+      <DependentUpon>frmPesquisaEmpresa.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="libmongocrypt.dylib" />
     <None Include="libmongocrypt.so" />

@@ -39,8 +39,8 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -139,19 +139,6 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // button2
-            // 
-            this.button2.BackgroundImage = global::MicroFix.Properties.Resources.errado;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(833, 8);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(30, 25);
-            this.button2.TabIndex = 14;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -165,6 +152,19 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(405, 327);
             this.panel2.TabIndex = 15;
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::MicroFix.Properties.Resources.errado;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(833, 8);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(30, 25);
+            this.button2.TabIndex = 14;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox1
             // 
