@@ -214,6 +214,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="View\frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
@@ -237,6 +238,12 @@
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
     <Content Include="mongocrypt.dll" />
+    <None Include="Resources\company2_add.png" />
+    <None Include="Resources\Imagem do WhatsApp de 2022-11-04 à%28s%29 21.47.01.jpg" />
+    <None Include="Resources\lupa.png" />
+    <None Include="Resources\add_User.png" />
+    <None Include="Resources\microscope_blue.png" />
+    <None Include="Resources\document_new.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
