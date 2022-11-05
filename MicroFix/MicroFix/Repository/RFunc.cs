@@ -68,9 +68,9 @@ namespace MicroFix.Repository
             }
             return false;
         }
-        public void AdicionarById(Funcionario f, string id)
+        public void AdicionarById(Funcionario f)
         {
-            var filtro = Builders<Funcionario>.Filter.Where(c => c.IdFunc == id);
+            var filtro = Builders<Funcionario>.Filter.Where(c => c.IdFunc == f.IdFunc);
             var alteracao = Builders<Funcionario>.Update.Set(c => c.NomeFunc, f.NomeFunc)
                                                         .Set(c => c.Area, "Funcionario")
                                                         .Set(c => c.Senha, f.Senha);

@@ -53,6 +53,12 @@ namespace MicroFix
                 MessageBox.Show("Senha ou Nome incorreto. Tente Novamente!","Alerta!",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmCadastrarFunc fcf = new frmCadastrarFunc();
+            fcf.ShowDialog();
+        }
     }
 
 }

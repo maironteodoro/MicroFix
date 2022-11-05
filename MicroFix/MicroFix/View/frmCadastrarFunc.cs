@@ -15,7 +15,7 @@ namespace MicroFix.View
     public partial class frmCadastrarFunc : MetroFramework.Forms.MetroForm
     {
 
-
+        RFunc rf = new RFunc();
         //lembrar que IdFunc é string
         public frmCadastrarFunc()
         {
@@ -34,7 +34,37 @@ namespace MicroFix.View
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            if(txtSenha.Text == txtSenha2.Text)
+            {
+                List<Funcionario> listFunc = new List<Funcionario>();
+                listFunc = rf.GetAllFunc();
+                foreach(Funcionario func in listFunc)
+                {
+                    if (func.IdFunc == txtID.Text)
+                    {
+                        if (func.NomeFunc == null&& func.Senha == null)
+                        {
+                            Funcionario f = new Funcionario();
+                            f.NomeFunc = txtNome.Text;
+                            f.Senha = txtSenha.Text;
+                            f.IdFunc = txtID.Text;
+                            rf.AdicionarById(f);
+                            MessageBox.Show("Funcionário cadastrado com sucesso!");
+                            Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Funcionário com este ID já existente. Contate seu Gerente", "Alerta!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            break;
+                        }
+                    }
+                }   
+                    MessageBox.Show("ID não encontrado. Contate seu Gerente", "Alerta!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                MessageBox.Show("Senha Incorreta. Tente Novamente!", "Alerta!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
@@ -46,5 +76,6 @@ namespace MicroFix.View
         {
 
         }
+
     }
 }
