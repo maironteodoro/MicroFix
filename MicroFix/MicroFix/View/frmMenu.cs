@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MicroFix.Model;
+using MicroFix.Repository;
 
 namespace MicroFix.View
 {
-    public partial class frmMenu : MetroFramework.Forms.MetroForm
+    public partial class frmMenu : Form
     {
+        Funcionario f = new Funcionario();
         public frmMenu()
         {
             InitializeComponent();
@@ -20,6 +23,16 @@ namespace MicroFix.View
         private void frmMenu_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

@@ -13,7 +13,7 @@ using MicroFix.View;
 
 namespace MicroFix
 {
-    public partial class frmLogin : MetroFramework.Forms.MetroForm
+    public partial class frmLogin : Form
     {
         public frmLogin()
         {
@@ -45,6 +45,7 @@ namespace MicroFix
             bool confirmacao = rf.Confirm(txtNome.Text,txtSenha.Text);
             if (confirmacao==true)
             {
+
                 frmMenu frmM = new frmMenu();
                 frmM.ShowDialog();
             }
@@ -58,6 +59,41 @@ namespace MicroFix
         {
             frmCadastrarFunc fcf = new frmCadastrarFunc();
             fcf.ShowDialog();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 
