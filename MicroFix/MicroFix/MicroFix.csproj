@@ -257,6 +257,7 @@
     <Compile Include="Model\Microscopio.cs" />
     <Compile Include="Model\Servico.cs" />
     <Compile Include="Model\Status.cs" />
+    <Compile Include="Repository\GenericRepository.cs" />
     <Compile Include="Repository\REmpresa.cs" />
     <Compile Include="Repository\RFunc.cs" />
     <Compile Include="Repository\RMicroscopio.cs" />
@@ -274,6 +275,12 @@
     <Compile Include="View\frmEmpresa.Designer.cs">
       <DependentUpon>frmEmpresa.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmFormulario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmFormulario.Designer.cs">
+      <DependentUpon>frmFormulario.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -289,17 +296,32 @@
     <Compile Include="View\frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmMicroscopio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmMicroscopio.Designer.cs">
+      <DependentUpon>frmMicroscopio.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmPesquisaEmpresa.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\frmPesquisaEmpresa.Designer.cs">
       <DependentUpon>frmPesquisaEmpresa.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmPesquisaMicroscopio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmPesquisaMicroscopio.Designer.cs">
+      <DependentUpon>frmPesquisaMicroscopio.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="View\frmCadastrarFunc.resx">
       <DependentUpon>frmCadastrarFunc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmEmpresa.resx">
       <DependentUpon>frmEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmFormulario.resx">
+      <DependentUpon>frmFormulario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -317,8 +339,14 @@
     <EmbeddedResource Include="View\frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\frmMicroscopio.resx">
+      <DependentUpon>frmMicroscopio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmPesquisaEmpresa.resx">
       <DependentUpon>frmPesquisaEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmPesquisaMicroscopio.resx">
+      <DependentUpon>frmPesquisaMicroscopio.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="libmongocrypt.dylib" />
     <None Include="libmongocrypt.so" />

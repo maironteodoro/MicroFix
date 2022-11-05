@@ -84,6 +84,7 @@
             this.btnFormulário.Text = "Formulário";
             this.btnFormulário.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnFormulário.UseVisualStyleBackColor = false;
+            this.btnFormulário.Click += new System.EventHandler(this.btnFormulário_Click);
             // 
             // button6
             // 
@@ -100,6 +101,7 @@
             this.button6.Text = "Microscopio";
             this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // btnEmpresa
             // 

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button7 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,21 +45,9 @@
             this.txtTelefone = new System.Windows.Forms.TextBox();
             this.btnPesquisa = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // button7
-            // 
-            this.button7.BackgroundImage = global::MicroFix.Properties.Resources.errado;
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(884, 12);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(30, 25);
-            this.button7.TabIndex = 13;
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // panel2
             // 
@@ -81,7 +68,7 @@
             this.panel2.Controls.Add(this.btnExcluir);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(81, 55);
+            this.panel2.Location = new System.Drawing.Point(60, 44);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(746, 531);
             this.panel2.TabIndex = 16;
@@ -249,6 +236,19 @@
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Visible = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // button7
+            // 
+            this.button7.BackgroundImage = global::MicroFix.Properties.Resources.errado;
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Location = new System.Drawing.Point(884, 12);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(30, 25);
+            this.button7.TabIndex = 13;
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // frmEmpresa
             // 

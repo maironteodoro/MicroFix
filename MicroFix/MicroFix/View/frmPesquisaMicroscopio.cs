@@ -13,41 +13,32 @@ using MicroFix.View;
 
 namespace MicroFix.View
 {
-    public partial class frmPesquisaEmpresa : Form
+    public partial class frmPesquisaMicroscopio : Form
     {
-        public frmPesquisaEmpresa()
+        public frmPesquisaMicroscopio()
         {
             InitializeComponent();
         }
-        REmpresa re = new REmpresa();
-        Empresa emp = new Empresa();
         private int id;
-        public int Id { get => id; set => id = value; }
 
-        private void frmPesquisaEmpresa_Load(object sender, EventArgs e)
+        public int Id { get => id; set => id = value; }
+        Microscopio m = new Microscopio();
+        RMicroscopio rm = new RMicroscopio();
+
+        private void frmPesquisaMicroscopio_Load(object sender, EventArgs e)
         {
 
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = re.Get(txtNome.Text);
+            dataGridView1.DataSource = rm.Get(txtNome.Text);
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             Id = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
             Close();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void txtNome_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

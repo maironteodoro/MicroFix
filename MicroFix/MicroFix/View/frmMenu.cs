@@ -40,5 +40,18 @@ namespace MicroFix.View
             frmEmpresa fe = new frmEmpresa();
             fe.ShowDialog();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            frmMicroscopio fm = new frmMicroscopio();
+            fm.ShowDialog();
+
+        }
+
+        private void btnFormulário_Click(object sender, EventArgs e)
+        {
+            frmFormulario ff = new frmFormulario();
+            ff.ShowDialog();
+        }
     }
 }
