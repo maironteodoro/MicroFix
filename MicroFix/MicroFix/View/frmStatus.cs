@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MicroFix.Model;
+
 
 namespace MicroFix.View
 {
@@ -28,25 +30,35 @@ namespace MicroFix.View
 
         private void btt_concluir_Click(object sender, EventArgs e)
         {
-            id = int.Parse(txt_numero.Text);
+            
             rs.concluiStatus(id);
             MessageBox.Show("Concluido com sucesso!!!");
+            dataGridView1.DataSource = rs.GetAllStatus();
         }
 
         private void btt_pesquisar_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = rs.GetStatus(int.Parse(txt_numero.Text));
+            dataGridView1.DataSource = rs.GetStatusByNumSerie(int.Parse(txt_numero.Text));
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            id = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
-            Close();
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void frmStatus_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = rs.GetAllStatus();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            id = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
         }
     }
 }

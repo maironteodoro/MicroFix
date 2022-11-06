@@ -331,6 +331,12 @@
     <Compile Include="View\frmPesquisaMicroscopio.Designer.cs">
       <DependentUpon>frmPesquisaMicroscopio.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmStatus.Designer.cs">
+      <DependentUpon>frmStatus.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="View\frmBusca.resx">
       <DependentUpon>frmBusca.cs</DependentUpon>
     </EmbeddedResource>
@@ -373,6 +379,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmPesquisaMicroscopio.resx">
       <DependentUpon>frmPesquisaMicroscopio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmStatus.resx">
+      <DependentUpon>frmStatus.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="libmongocrypt.dylib" />
     <None Include="libmongocrypt.so" />

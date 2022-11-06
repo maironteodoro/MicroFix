@@ -17,7 +17,7 @@ namespace MicroFix
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmBusca());
+            Application.Run(new frmMenu());
         }
     }
 }
