@@ -45,7 +45,6 @@ namespace MicroFix
             bool confirmacao = rf.Confirm(txtNome.Text,txtSenha.Text);
             if (confirmacao==true)
             {
-
                 frmMenu frmM = new frmMenu();
                 frmM.ShowDialog();
             }

@@ -53,11 +53,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(118, 50);
+            this.label1.Location = new System.Drawing.Point(107, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(147, 22);
             this.label1.TabIndex = 15;
             this.label1.Text = "Número de série:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtNome
             // 
@@ -91,6 +92,7 @@
             this.button1.Size = new System.Drawing.Size(30, 25);
             this.button1.TabIndex = 20;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 

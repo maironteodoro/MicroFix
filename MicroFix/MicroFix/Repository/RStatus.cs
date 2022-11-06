@@ -15,7 +15,7 @@ namespace MicroFix.Repository
             SqlConnection conn = new SqlConnection();
             conn.ConnectionString = "Server =DESKTOP-0G0JKVA;Database=MicroFix;UID=mairon;PWD=123";
             conn.Open();
-            string sql = $"Insert into Status(IdMicoscopio, IdServico, Satus,DescricaoProblema) " +
+            string sql = $"Insert into Status(IdMicroscopio, IdServico, Status,DescricaoProblema) " +
                 $"values ('{s.IdMicroscopio}', '{s.IdServico}', '{s.Estado}', '{s.DescricaoProblema}')";
 
             SqlCommand cmd = new SqlCommand();

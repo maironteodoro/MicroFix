@@ -43,8 +43,8 @@
             this.btnExcluir = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,6 +69,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(746, 531);
             this.panel2.TabIndex = 18;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // btnSalvar
             // 
@@ -175,7 +176,7 @@
             // btnCadastrar
             // 
             this.btnCadastrar.Enabled = false;
-            this.btnCadastrar.Location = new System.Drawing.Point(418, 421);
+            this.btnCadastrar.Location = new System.Drawing.Point(400, 421);
             this.btnCadastrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(104, 49);
@@ -215,18 +216,6 @@
             this.label3.TabIndex = 9;
             this.label3.Text = "Marca:";
             // 
-            // button7
-            // 
-            this.button7.BackgroundImage = global::MicroFix.Properties.Resources.errado;
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(787, -62);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(30, 25);
-            this.button7.TabIndex = 17;
-            this.button7.UseVisualStyleBackColor = true;
-            // 
             // button1
             // 
             this.button1.BackgroundImage = global::MicroFix.Properties.Resources.errado;
@@ -239,6 +228,18 @@
             this.button1.TabIndex = 19;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button7
+            // 
+            this.button7.BackgroundImage = global::MicroFix.Properties.Resources.errado;
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Location = new System.Drawing.Point(787, -62);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(30, 25);
+            this.button7.TabIndex = 17;
+            this.button7.UseVisualStyleBackColor = true;
             // 
             // frmMicroscopio
             // 

@@ -10,18 +10,18 @@ namespace MicroFix.Model
     {
         private int idServico;
         private int idEmpresa;
-        private int idFunc;
+        private string idFunc;
         private string descricao;
         private DateTime prazo;
         private DateTime dataChegada;
-        private double valor;
+        private float valor;
 
         public int IdServico { get => idServico; set => idServico = value; }
         public int IdEmpresa { get => idEmpresa; set => idEmpresa = value; }
-        public int IdFunc { get => idFunc; set => idFunc = value; }
+        public string IdFunc { get => idFunc; set => idFunc = value; }
         public string Descricao { get => descricao; set => descricao = value; }
         public DateTime Prazo { get => prazo; set => prazo = value; }
         public DateTime DataChegada { get => dataChegada; set => dataChegada = value; }
-        public double Valor { get => valor; set => valor = value; }
+        public float Valor { get => valor; set => valor = value; }
     }
 }

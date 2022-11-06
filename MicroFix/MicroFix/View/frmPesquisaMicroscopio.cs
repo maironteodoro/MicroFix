@@ -40,5 +40,15 @@ namespace MicroFix.View
             Id = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
             Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

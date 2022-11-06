@@ -8,7 +8,7 @@ namespace MicroFix.Model
 {
     internal interface IServico
     {
-        void adicionaServico(Servico se);
+        int adicionaServico(Servico se);
         void alteraServico(Servico se);
         void excluiServico(Servico se);
         IEnumerable<Servico> GetServicoByIdEmpresa(int IdEmpresa);

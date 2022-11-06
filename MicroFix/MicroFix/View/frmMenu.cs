@@ -53,5 +53,15 @@ namespace MicroFix.View
             frmFormulario ff = new frmFormulario();
             ff.ShowDialog();
         }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmGerarFunc fgf = new frmGerarFunc();
+            fgf.ShowDialog();
+        }
     }
 }

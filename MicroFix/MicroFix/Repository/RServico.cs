@@ -10,21 +10,34 @@ namespace MicroFix.Repository
 {
     internal class RServico:IServico
     {
-        public void adicionaServico(Servico se)
+        public int adicionaServico(Servico se)
         {
             SqlConnection conn = new SqlConnection();
             conn.ConnectionString = "Server =DESKTOP-0G0JKVA;Database=MicroFix;UID=mairon;PWD=123";
             conn.Open();
-            string sql = $"Insert into Status(IdEmpresa, IdFunc,Descricao,Prazo,Valor,DataChegada) " +
-
-                //checar se os tipos date como prazo e Data chegada estão incrementando corretamente
-                $"values ('{se.IdEmpresa}', '{se.IdFunc}', '{se.Descricao}', '{se.Prazo}','{se.Valor}','{se.DataChegada}')";
-
+            string sql = $"Insert into Servico(IdEmpresa, IdFunc,Descricao,Prazo,Valor,DataChegada) " +
+               $"values ('{se.IdEmpresa} ', '{se.IdFunc}', '{se.Descricao} ', '{se.Prazo} ','{se.Valor} ','{se.DataChegada}')";
+            //checar se os tipos date como prazo e Data chegada estão incrementando corretamente
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = conn;
             cmd.CommandText = sql;
             cmd.ExecuteNonQuery();
             conn.Close();
+
+            int idServico= 0;
+
+            conn.Open();
+             sql = $"select IdServico from Servico where IdEmpresa ='{se.IdEmpresa}' and  IdFunc = '{se.IdFunc}' and  " +
+                         $"Descricao = '{se.Descricao}' and Prazo ='{se.Prazo}'and Valor ='{se.Valor}' and DataChegada = '{se.DataChegada}'";
+            cmd.Connection = conn;
+            cmd.CommandText = sql;
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                idServico = int.Parse(dr[0].ToString());
+            }
+            conn.Close();
+            return idServico; 
         }
         public void alteraServico(Servico se)
         {
@@ -46,10 +59,17 @@ namespace MicroFix.Repository
             SqlConnection conn = new SqlConnection();
             conn.ConnectionString = "Server =DESKTOP-0G0JKVA;Database=MicroFix;UID=mairon;PWD=123";
             conn.Open();
-            string sql = $"Delete Servico where IdServico = {se.IdServico}";
+            string sql = $"Update Status set IdServico = null  where IdServico = {se.IdServico}";
 
             SqlCommand cmd = new SqlCommand();
 
+            cmd.Connection = conn;
+            cmd.CommandText = sql;
+            cmd.ExecuteNonQuery();
+            conn.Close();
+            conn.Open();
+            sql = $"Delete Servico where IdServico = {se.IdServico}";
+            cmd = new SqlCommand();
             cmd.Connection = conn;
             cmd.CommandText = sql;
             cmd.ExecuteNonQuery();
@@ -73,9 +93,9 @@ namespace MicroFix.Repository
                 se.IdServico = int.Parse(dr[0].ToString());
                 se.Descricao = dr[1].ToString();
                 se.Prazo = DateTime.Parse(dr[2].ToString());
-                se.Valor = double.Parse(dr[3].ToString());
+                se.Valor = float.Parse(dr[3].ToString());
                 se.IdEmpresa = int.Parse(dr[4].ToString());
-                se.IdFunc = int.Parse(dr[5].ToString());
+                se.IdFunc = dr[5].ToString();
                 se.DataChegada = DateTime.Parse(dr[6].ToString());
                 ListaDadosServico.Add(se);
             }
@@ -99,9 +119,9 @@ namespace MicroFix.Repository
                 se.IdServico = int.Parse(dr[0].ToString());
                 se.Descricao = dr[1].ToString();
                 se.Prazo = DateTime.Parse(dr[2].ToString());
-                se.Valor = double.Parse(dr[3].ToString());
+                se.Valor = float.Parse(dr[3].ToString());
                 se.IdEmpresa = int.Parse(dr[4].ToString());
-                se.IdFunc = int.Parse(dr[5].ToString());
+                se.IdFunc = dr[5].ToString();
                 se.DataChegada = DateTime.Parse(dr[6].ToString());
                 ListaDadosServico.Add(se);
             }
@@ -115,7 +135,9 @@ namespace MicroFix.Repository
 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = conn;
-            cmd.CommandText = $"Select * from Servico where IdServico = {id}";
+            cmd.CommandText = $"Select s.IdServico,s.Descricao,s.Prazo,s.Valor,s.IdEmpresa,s.IdFunc,s.DataChegada " +
+                $" from Servico s inner join Status st on s.IdServico = st.IdServico" +
+                $" where st.IdMicroscopio = {id}";
 
             SqlDataReader dr = cmd.ExecuteReader();
             Servico se = new Servico();
@@ -125,9 +147,9 @@ namespace MicroFix.Repository
                 se.IdServico = int.Parse(dr[0].ToString());
                 se.Descricao = dr[1].ToString();
                 se.Prazo = DateTime.Parse(dr[2].ToString());
-                se.Valor = double.Parse(dr[3].ToString());
+                se.Valor = float.Parse(dr[3].ToString());
                 se.IdEmpresa = int.Parse(dr[4].ToString());
-                se.IdFunc = int.Parse(dr[5].ToString());
+                se.IdFunc = dr[5].ToString();
                 se.DataChegada = DateTime.Parse(dr[6].ToString());
             }
             return se;
@@ -150,9 +172,9 @@ namespace MicroFix.Repository
                 se.IdServico = int.Parse(dr[0].ToString());
                 se.Descricao = dr[1].ToString();
                 se.Prazo = DateTime.Parse(dr[2].ToString());
-                se.Valor = double.Parse(dr[3].ToString());
+                se.Valor = float.Parse(dr[3].ToString());
                 se.IdEmpresa = int.Parse(dr[4].ToString());
-                se.IdFunc = int.Parse(dr[5].ToString());
+                se.IdFunc = dr[5].ToString();
                 se.DataChegada = DateTime.Parse(dr[6].ToString());
                 ListaDadosServico.Add(se);
             }

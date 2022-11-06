@@ -30,13 +30,17 @@
         {
             this.button7 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cmbFuncionario = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dtpChegada = new System.Windows.Forms.DateTimePicker();
+            this.dtpPrazo = new System.Windows.Forms.DateTimePicker();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnPesquisa = new System.Windows.Forms.Button();
-            this.txtTelefone = new System.Windows.Forms.TextBox();
-            this.txtNomeResp = new System.Windows.Forms.TextBox();
+            this.txtDescricaoProblema = new System.Windows.Forms.TextBox();
+            this.txtValor = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
@@ -44,11 +48,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cmbEmpresa = new System.Windows.Forms.ComboBox();
             this.cmbMicroscopio = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.cmbFuncionario = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,16 +67,15 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.cmbFuncionario);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.dateTimePicker2);
-            this.panel2.Controls.Add(this.dateTimePicker1);
+            this.panel2.Controls.Add(this.dtpChegada);
+            this.panel2.Controls.Add(this.dtpPrazo);
             this.panel2.Controls.Add(this.btnSalvar);
             this.panel2.Controls.Add(this.btnPesquisa);
-            this.panel2.Controls.Add(this.txtTelefone);
-            this.panel2.Controls.Add(this.txtNomeResp);
+            this.panel2.Controls.Add(this.txtDescricaoProblema);
+            this.panel2.Controls.Add(this.txtValor);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label2);
@@ -91,6 +89,51 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(746, 531);
             this.panel2.TabIndex = 17;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(122, 187);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(80, 16);
+            this.label7.TabIndex = 33;
+            this.label7.Text = "Funcionario:";
+            // 
+            // cmbFuncionario
+            // 
+            this.cmbFuncionario.Enabled = false;
+            this.cmbFuncionario.FormattingEnabled = true;
+            this.cmbFuncionario.Location = new System.Drawing.Point(206, 183);
+            this.cmbFuncionario.Name = "cmbFuncionario";
+            this.cmbFuncionario.Size = new System.Drawing.Size(180, 24);
+            this.cmbFuncionario.TabIndex = 32;
+            this.cmbFuncionario.SelectedIndexChanged += new System.EventHandler(this.cmbFuncionario_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(45, 318);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(159, 16);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "Descrição de problemas:";
+            // 
+            // dtpChegada
+            // 
+            this.dtpChegada.Enabled = false;
+            this.dtpChegada.Location = new System.Drawing.Point(205, 213);
+            this.dtpChegada.Name = "dtpChegada";
+            this.dtpChegada.Size = new System.Drawing.Size(280, 22);
+            this.dtpChegada.TabIndex = 31;
+            // 
+            // dtpPrazo
+            // 
+            this.dtpPrazo.Enabled = false;
+            this.dtpPrazo.Location = new System.Drawing.Point(205, 251);
+            this.dtpPrazo.Name = "dtpPrazo";
+            this.dtpPrazo.Size = new System.Drawing.Size(280, 22);
+            this.dtpPrazo.TabIndex = 30;
             // 
             // btnSalvar
             // 
@@ -103,6 +146,7 @@
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Visible = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnPesquisa
             // 
@@ -114,27 +158,29 @@
             this.btnPesquisa.TabIndex = 26;
             this.btnPesquisa.Text = "Pesquisar";
             this.btnPesquisa.UseVisualStyleBackColor = true;
+            this.btnPesquisa.Click += new System.EventHandler(this.btnPesquisa_Click);
             // 
-            // txtTelefone
+            // txtDescricaoProblema
             // 
-            this.txtTelefone.BackColor = System.Drawing.Color.White;
-            this.txtTelefone.Enabled = false;
-            this.txtTelefone.Location = new System.Drawing.Point(48, 336);
-            this.txtTelefone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtTelefone.Multiline = true;
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(341, 160);
-            this.txtTelefone.TabIndex = 25;
+            this.txtDescricaoProblema.BackColor = System.Drawing.Color.White;
+            this.txtDescricaoProblema.Enabled = false;
+            this.txtDescricaoProblema.Location = new System.Drawing.Point(48, 336);
+            this.txtDescricaoProblema.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDescricaoProblema.Multiline = true;
+            this.txtDescricaoProblema.Name = "txtDescricaoProblema";
+            this.txtDescricaoProblema.Size = new System.Drawing.Size(341, 160);
+            this.txtDescricaoProblema.TabIndex = 25;
+            this.txtDescricaoProblema.TextChanged += new System.EventHandler(this.txtDescricaoProblema_TextChanged);
             // 
-            // txtNomeResp
+            // txtValor
             // 
-            this.txtNomeResp.BackColor = System.Drawing.Color.White;
-            this.txtNomeResp.Enabled = false;
-            this.txtNomeResp.Location = new System.Drawing.Point(205, 291);
-            this.txtNomeResp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtNomeResp.Name = "txtNomeResp";
-            this.txtNomeResp.Size = new System.Drawing.Size(179, 22);
-            this.txtNomeResp.TabIndex = 24;
+            this.txtValor.BackColor = System.Drawing.Color.White;
+            this.txtValor.Enabled = false;
+            this.txtValor.Location = new System.Drawing.Point(205, 291);
+            this.txtValor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtValor.Name = "txtValor";
+            this.txtValor.Size = new System.Drawing.Size(179, 22);
+            this.txtValor.TabIndex = 24;
             // 
             // label6
             // 
@@ -153,15 +199,6 @@
             this.label5.Size = new System.Drawing.Size(42, 16);
             this.label5.TabIndex = 21;
             this.label5.Text = "Valor:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(45, 318);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(159, 16);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "Descrição de problemas:";
             // 
             // label2
             // 
@@ -182,6 +219,7 @@
             this.btnCadastrar.TabIndex = 15;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // btnExcluir
             // 
@@ -193,6 +231,7 @@
             this.btnExcluir.TabIndex = 11;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // label1
             // 
@@ -215,6 +254,7 @@
             // 
             // cmbEmpresa
             // 
+            this.cmbEmpresa.Enabled = false;
             this.cmbEmpresa.FormattingEnabled = true;
             this.cmbEmpresa.Location = new System.Drawing.Point(206, 110);
             this.cmbEmpresa.Name = "cmbEmpresa";
@@ -224,53 +264,13 @@
             // 
             // cmbMicroscopio
             // 
+            this.cmbMicroscopio.Enabled = false;
             this.cmbMicroscopio.FormattingEnabled = true;
             this.cmbMicroscopio.Location = new System.Drawing.Point(205, 151);
             this.cmbMicroscopio.Name = "cmbMicroscopio";
             this.cmbMicroscopio.Size = new System.Drawing.Size(180, 24);
             this.cmbMicroscopio.TabIndex = 29;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(205, 251);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(280, 22);
-            this.dateTimePicker1.TabIndex = 30;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(205, 213);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(280, 22);
-            this.dateTimePicker2.TabIndex = 31;
-            // 
-            // cmbFuncionario
-            // 
-            this.cmbFuncionario.FormattingEnabled = true;
-            this.cmbFuncionario.Location = new System.Drawing.Point(206, 183);
-            this.cmbFuncionario.Name = "cmbFuncionario";
-            this.cmbFuncionario.Size = new System.Drawing.Size(180, 24);
-            this.cmbFuncionario.TabIndex = 32;
-            this.cmbFuncionario.SelectedIndexChanged += new System.EventHandler(this.cmbFuncionario_SelectedIndexChanged);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(122, 187);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(80, 16);
-            this.label7.TabIndex = 33;
-            this.label7.Text = "Funcionario:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(440, 131);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(44, 16);
-            this.label8.TabIndex = 34;
-            this.label8.Text = "label8";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
+            this.cmbMicroscopio.SelectedIndexChanged += new System.EventHandler(this.cmbMicroscopio_SelectedIndexChanged);
             // 
             // frmFormulario
             // 
@@ -297,8 +297,8 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnPesquisa;
-        private System.Windows.Forms.TextBox txtTelefone;
-        private System.Windows.Forms.TextBox txtNomeResp;
+        private System.Windows.Forms.TextBox txtDescricaoProblema;
+        private System.Windows.Forms.TextBox txtValor;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -307,12 +307,11 @@
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpChegada;
+        private System.Windows.Forms.DateTimePicker dtpPrazo;
         private System.Windows.Forms.ComboBox cmbEmpresa;
         private System.Windows.Forms.ComboBox cmbMicroscopio;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cmbFuncionario;
-        private System.Windows.Forms.Label label8;
     }
 }
