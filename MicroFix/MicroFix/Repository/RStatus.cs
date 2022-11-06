@@ -148,5 +148,20 @@ namespace MicroFix.Repository
             }
             return ListaDadosStatus;
         }
+
+        public void concluiStatus(int cod)
+        {
+            SqlConnection conn = new SqlConnection();
+            conn.ConnectionString = "Server =DESKTOP-0G0JKVA;Database=MicroFix;UID=mairon;PWD=123";
+            conn.Open();
+            string sql = $"Update Status set Status = concluido where " + cod;
+
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.Connection = conn;
+            cmd.CommandText = sql;
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
     }
 }

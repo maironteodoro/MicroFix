@@ -29,7 +29,7 @@ namespace MicroFix.View
         private void btt_concluir_Click(object sender, EventArgs e)
         {
             id = int.Parse(txt_numero.Text);
-            rs.alteraStatus(id);
+            rs.concluiStatus(id);
             MessageBox.Show("Concluido com sucesso!!!");
         }
 
