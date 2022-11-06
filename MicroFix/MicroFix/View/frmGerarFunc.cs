@@ -28,6 +28,7 @@ namespace MicroFix.View
 
         private void btnGerar_Click(object sender, EventArgs e)
         {
+            txtNome.Enabled = true;
             rf.AdicionarFunc(f);
             List<Funcionario> listFunc = new List<Funcionario>();
             listFunc = rf.GetAllFunc();
@@ -42,5 +43,10 @@ namespace MicroFix.View
             }
             txtNome.Text = f.IdFunc;
          }
+
+        private void frmGerarFunc_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

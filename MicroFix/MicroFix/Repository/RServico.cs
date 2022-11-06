@@ -75,7 +75,7 @@ namespace MicroFix.Repository
             cmd.ExecuteNonQuery();
             conn.Close();
         }
-        public IEnumerable<Servico> GetServicoByIdEmpresa(int IdEmpresa)
+        public Servico GetServicoById(int id)
         {
             SqlConnection conn = new SqlConnection();
             conn.ConnectionString = "Server =DESKTOP-0G0JKVA;Database=MicroFix;UID=mairon;PWD=123";
@@ -83,13 +83,13 @@ namespace MicroFix.Repository
 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = conn;
-            cmd.CommandText = $"Select * from Servico where IdEmpresa like '{IdEmpresa}%'";
+            cmd.CommandText = $"Select *  from Servico where IdServico = {id}";
 
             SqlDataReader dr = cmd.ExecuteReader();
-            List<Servico> ListaDadosServico = new List<Servico>();
-            while (dr.Read())
+            Servico se = new Servico();
+
+            if (dr.Read())
             {
-                Servico se = new Servico();
                 se.IdServico = int.Parse(dr[0].ToString());
                 se.Descricao = dr[1].ToString();
                 se.Prazo = DateTime.Parse(dr[2].ToString());
@@ -97,37 +97,10 @@ namespace MicroFix.Repository
                 se.IdEmpresa = int.Parse(dr[4].ToString());
                 se.IdFunc = dr[5].ToString();
                 se.DataChegada = DateTime.Parse(dr[6].ToString());
-                ListaDadosServico.Add(se);
             }
-            return ListaDadosServico;
+            return se;
         }
-        public IEnumerable<Servico> GetServicoByIdFunc(int IdFunc)
-        {
-            SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = "Server =DESKTOP-0G0JKVA;Database=MicroFix;UID=mairon;PWD=123";
-            conn.Open();
-
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = conn;
-            cmd.CommandText = $"Select * from Servico where IdFunc like '{IdFunc}%'";
-
-            SqlDataReader dr = cmd.ExecuteReader();
-            List<Servico> ListaDadosServico = new List<Servico>();
-            while (dr.Read())
-            {
-                Servico se = new Servico();
-                se.IdServico = int.Parse(dr[0].ToString());
-                se.Descricao = dr[1].ToString();
-                se.Prazo = DateTime.Parse(dr[2].ToString());
-                se.Valor = float.Parse(dr[3].ToString());
-                se.IdEmpresa = int.Parse(dr[4].ToString());
-                se.IdFunc = dr[5].ToString();
-                se.DataChegada = DateTime.Parse(dr[6].ToString());
-                ListaDadosServico.Add(se);
-            }
-            return ListaDadosServico;
-        }
-        public Servico GetServico(int id)
+        public Servico GetServicoByMicroId(int id)
         {
             SqlConnection conn = new SqlConnection();
             conn.ConnectionString = "Server =DESKTOP-0G0JKVA;Database=MicroFix;UID=mairon;PWD=123";

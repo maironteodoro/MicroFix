@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
             this.btnFormulário = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.btnEmpresa = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,6 +54,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(154, 664);
             this.panel1.TabIndex = 12;
+            // 
+            // button7
+            // 
+            this.button7.BackgroundImage = global::MicroFix.Properties.Resources.errado;
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Location = new System.Drawing.Point(881, 12);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(30, 25);
+            this.button7.TabIndex = 12;
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // btnFormulário
             // 
@@ -158,19 +171,7 @@
             this.button3.Text = "Buscar";
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.BackgroundImage = global::MicroFix.Properties.Resources.errado;
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(881, 12);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(30, 25);
-            this.button7.TabIndex = 12;
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // frmMenu
             // 

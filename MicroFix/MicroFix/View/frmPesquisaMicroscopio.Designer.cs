@@ -32,8 +32,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -73,13 +73,26 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(49, 167);
+            this.dataGridView1.Location = new System.Drawing.Point(49, 165);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(776, 303);
             this.dataGridView1.TabIndex = 13;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.btnBuscar);
+            this.panel2.Controls.Add(this.txtNome);
+            this.panel2.Location = new System.Drawing.Point(49, 41);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(776, 118);
+            this.panel2.TabIndex = 21;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // button1
             // 
@@ -93,17 +106,6 @@
             this.button1.TabIndex = 20;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.btnBuscar);
-            this.panel2.Controls.Add(this.txtNome);
-            this.panel2.Location = new System.Drawing.Point(49, 43);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(776, 118);
-            this.panel2.TabIndex = 21;
             // 
             // frmPesquisaMicroscopio
             // 

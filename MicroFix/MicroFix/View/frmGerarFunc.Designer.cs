@@ -28,26 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnGerar = new System.Windows.Forms.Button();
             this.txtNome = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::MicroFix.Properties.Resources.errado;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(884, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(30, 25);
-            this.button1.TabIndex = 21;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
@@ -84,12 +71,26 @@
             // txtNome
             // 
             this.txtNome.BackColor = System.Drawing.Color.White;
+            this.txtNome.Enabled = false;
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.Location = new System.Drawing.Point(271, 47);
             this.txtNome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(179, 28);
             this.txtNome.TabIndex = 14;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::MicroFix.Properties.Resources.errado;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(884, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(30, 25);
+            this.button1.TabIndex = 21;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmGerarFunc
             // 
@@ -102,6 +103,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmGerarFunc";
             this.Text = "frmGerarFunc";
+            this.Load += new System.EventHandler(this.frmGerarFunc_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);

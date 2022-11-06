@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button7 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.cmbFuncionario = new System.Windows.Forms.ComboBox();
@@ -48,21 +47,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cmbEmpresa = new System.Windows.Forms.ComboBox();
             this.cmbMicroscopio = new System.Windows.Forms.ComboBox();
+            this.button7 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // button7
-            // 
-            this.button7.BackgroundImage = global::MicroFix.Properties.Resources.errado;
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(866, 12);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(30, 25);
-            this.button7.TabIndex = 14;
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // panel2
             // 
@@ -138,7 +125,7 @@
             // btnSalvar
             // 
             this.btnSalvar.Enabled = false;
-            this.btnSalvar.Location = new System.Drawing.Point(418, 323);
+            this.btnSalvar.Location = new System.Drawing.Point(418, 325);
             this.btnSalvar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(104, 49);
@@ -271,6 +258,19 @@
             this.cmbMicroscopio.Size = new System.Drawing.Size(180, 24);
             this.cmbMicroscopio.TabIndex = 29;
             this.cmbMicroscopio.SelectedIndexChanged += new System.EventHandler(this.cmbMicroscopio_SelectedIndexChanged);
+            // 
+            // button7
+            // 
+            this.button7.BackgroundImage = global::MicroFix.Properties.Resources.errado;
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Location = new System.Drawing.Point(866, 12);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(30, 25);
+            this.button7.TabIndex = 14;
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // frmFormulario
             // 

@@ -262,6 +262,12 @@
     <Compile Include="Repository\RMicroscopio.cs" />
     <Compile Include="Repository\RServico.cs" />
     <Compile Include="Repository\RStatus.cs" />
+    <Compile Include="View\frmBusca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmBusca.Designer.cs">
+      <DependentUpon>frmBusca.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmCadastrarFunc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -307,6 +313,12 @@
     <Compile Include="View\frmMicroscopio.Designer.cs">
       <DependentUpon>frmMicroscopio.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmMostra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmMostra.Designer.cs">
+      <DependentUpon>frmMostra.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmPesquisaEmpresa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -319,6 +331,9 @@
     <Compile Include="View\frmPesquisaMicroscopio.Designer.cs">
       <DependentUpon>frmPesquisaMicroscopio.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\frmBusca.resx">
+      <DependentUpon>frmBusca.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmCadastrarFunc.resx">
       <DependentUpon>frmCadastrarFunc.cs</DependentUpon>
     </EmbeddedResource>
@@ -349,6 +364,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmMicroscopio.resx">
       <DependentUpon>frmMicroscopio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmMostra.resx">
+      <DependentUpon>frmMostra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmPesquisaEmpresa.resx">
       <DependentUpon>frmPesquisaEmpresa.cs</DependentUpon>

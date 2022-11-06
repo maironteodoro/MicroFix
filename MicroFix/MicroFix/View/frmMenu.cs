@@ -63,5 +63,11 @@ namespace MicroFix.View
             frmGerarFunc fgf = new frmGerarFunc();
             fgf.ShowDialog();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            frmBusca fb = new frmBusca();
+            fb.ShowDialog();
+        }
     }
 }

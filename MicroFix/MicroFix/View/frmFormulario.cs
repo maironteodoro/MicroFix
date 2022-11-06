@@ -173,7 +173,7 @@ namespace MicroFix.View
 
 
             Servico servico = new Servico();
-            servico = rs.GetServico(id);
+            servico = rs.GetServicoByMicroId(id);
             s.IdServico = servico.IdServico;
             txtValor.Text = servico.Valor.ToString();
             txtDescricaoProblema.Text = servico.Descricao ;
