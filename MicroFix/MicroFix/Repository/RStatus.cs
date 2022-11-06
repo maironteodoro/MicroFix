@@ -24,12 +24,13 @@ namespace MicroFix.Repository
             cmd.ExecuteNonQuery();
             conn.Close();
         }
-        public void alteraStatus(int cod)
+        public void alteraStatus(Status s)
         {
             SqlConnection conn = new SqlConnection();
             conn.ConnectionString = "Server =DESKTOP-0G0JKVA;Database=MicroFix;UID=mairon;PWD=123";
             conn.Open();
-            string sql = $"Update Status set Status = Concluido where " + cod;
+            string sql = $"Update Status set IdMicroscopio = '{s.IdMicroscopio}',IdServico = '{s.IdServico}', " +
+                $"Status ='{s.Estado}',DescricaoProblema = '{s.DescricaoProblema}' where IdStatus = {s.IdStatus}";
 
             SqlCommand cmd = new SqlCommand();
 
