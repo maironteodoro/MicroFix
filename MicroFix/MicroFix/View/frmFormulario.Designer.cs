@@ -92,7 +92,7 @@
             // 
             this.cmbFuncionario.Enabled = false;
             this.cmbFuncionario.FormattingEnabled = true;
-            this.cmbFuncionario.Location = new System.Drawing.Point(206, 183);
+            this.cmbFuncionario.Location = new System.Drawing.Point(216, 183);
             this.cmbFuncionario.Name = "cmbFuncionario";
             this.cmbFuncionario.Size = new System.Drawing.Size(180, 24);
             this.cmbFuncionario.TabIndex = 32;
@@ -111,7 +111,7 @@
             // dtpChegada
             // 
             this.dtpChegada.Enabled = false;
-            this.dtpChegada.Location = new System.Drawing.Point(205, 213);
+            this.dtpChegada.Location = new System.Drawing.Point(210, 213);
             this.dtpChegada.Name = "dtpChegada";
             this.dtpChegada.Size = new System.Drawing.Size(280, 22);
             this.dtpChegada.TabIndex = 31;
@@ -119,7 +119,7 @@
             // dtpPrazo
             // 
             this.dtpPrazo.Enabled = false;
-            this.dtpPrazo.Location = new System.Drawing.Point(205, 251);
+            this.dtpPrazo.Location = new System.Drawing.Point(209, 249);
             this.dtpPrazo.Name = "dtpPrazo";
             this.dtpPrazo.Size = new System.Drawing.Size(280, 22);
             this.dtpPrazo.TabIndex = 30;
@@ -165,7 +165,7 @@
             // 
             this.txtValor.BackColor = System.Drawing.Color.White;
             this.txtValor.Enabled = false;
-            this.txtValor.Location = new System.Drawing.Point(205, 291);
+            this.txtValor.Location = new System.Drawing.Point(208, 291);
             this.txtValor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(179, 22);
@@ -208,7 +208,7 @@
             this.btnCadastrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(104, 49);
-            this.btnCadastrar.TabIndex = 15;
+            this.btnCadastrar.TabIndex = 1;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
@@ -240,7 +240,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(126, 155);
+            this.label3.Location = new System.Drawing.Point(126, 152);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 16);
             this.label3.TabIndex = 9;
@@ -250,17 +250,18 @@
             // 
             this.cmbEmpresa.Enabled = false;
             this.cmbEmpresa.FormattingEnabled = true;
-            this.cmbEmpresa.Location = new System.Drawing.Point(206, 110);
+            this.cmbEmpresa.Location = new System.Drawing.Point(216, 111);
             this.cmbEmpresa.Name = "cmbEmpresa";
+            this.cmbEmpresa.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cmbEmpresa.Size = new System.Drawing.Size(180, 24);
-            this.cmbEmpresa.TabIndex = 28;
+            this.cmbEmpresa.TabIndex = 1;
             this.cmbEmpresa.SelectedIndexChanged += new System.EventHandler(this.cmbEmpresa_SelectedIndexChanged);
             // 
             // cmbMicroscopio
             // 
             this.cmbMicroscopio.Enabled = false;
             this.cmbMicroscopio.FormattingEnabled = true;
-            this.cmbMicroscopio.Location = new System.Drawing.Point(205, 151);
+            this.cmbMicroscopio.Location = new System.Drawing.Point(216, 148);
             this.cmbMicroscopio.Name = "cmbMicroscopio";
             this.cmbMicroscopio.Size = new System.Drawing.Size(180, 24);
             this.cmbMicroscopio.TabIndex = 29;
@@ -273,6 +274,7 @@
             this.ClientSize = new System.Drawing.Size(908, 617);
             this.Controls.Add(this.panel2);
             this.Name = "frmFormulario";
+            this.Style = MetroFramework.MetroColorStyle.Red;
             this.Load += new System.EventHandler(this.frmFormulario_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

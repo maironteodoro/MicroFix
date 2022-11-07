@@ -59,7 +59,7 @@
             // 
             // btnGerar
             // 
-            this.btnGerar.Location = new System.Drawing.Point(474, 37);
+            this.btnGerar.Location = new System.Drawing.Point(486, 39);
             this.btnGerar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGerar.Name = "btnGerar";
             this.btnGerar.Size = new System.Drawing.Size(104, 49);
@@ -73,7 +73,7 @@
             this.txtNome.BackColor = System.Drawing.Color.White;
             this.txtNome.Enabled = false;
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(271, 47);
+            this.txtNome.Location = new System.Drawing.Point(297, 49);
             this.txtNome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(179, 28);
@@ -86,6 +86,7 @@
             this.ClientSize = new System.Drawing.Size(926, 664);
             this.Controls.Add(this.panel2);
             this.Name = "frmGerarFunc";
+            this.Style = MetroFramework.MetroColorStyle.Red;
             this.Load += new System.EventHandler(this.frmGerarFunc_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

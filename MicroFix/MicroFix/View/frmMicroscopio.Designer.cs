@@ -255,6 +255,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button7);
             this.Name = "frmMicroscopio";
+            this.Style = MetroFramework.MetroColorStyle.Red;
             this.Load += new System.EventHandler(this.frmMicroscopio_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

@@ -14,7 +14,7 @@ using MicroFix.View;
 
 namespace MicroFix.View
 {
-    public partial class frmEmpresa : Form
+    public partial class frmEmpresa : MetroFramework.Forms.MetroForm
     {
         public frmEmpresa()
         {

@@ -39,8 +39,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -144,6 +144,17 @@
             this.panel2.Size = new System.Drawing.Size(476, 365);
             this.panel2.TabIndex = 15;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(161, 66);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(170, 42);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Cadastro";
+            // 
             // button1
             // 
             this.button1.BackgroundImage = global::MicroFix.Properties.Resources.list_add_user1;
@@ -157,17 +168,6 @@
             this.button1.TabIndex = 11;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(161, 66);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(170, 42);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Cadastro";
             // 
             // frmCadastrarFunc
             // 
@@ -184,6 +184,7 @@
             this.Name = "frmCadastrarFunc";
             this.Padding = new System.Windows.Forms.Padding(20, 74, 20, 20);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Style = MetroFramework.MetroColorStyle.Red;
             this.Text = " ";
             this.Load += new System.EventHandler(this.frmCadastrar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
