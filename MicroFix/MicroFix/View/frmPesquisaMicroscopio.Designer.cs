@@ -33,7 +33,6 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -53,6 +52,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(107, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(147, 22);
@@ -84,7 +84,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.btnBuscar);
             this.panel2.Controls.Add(this.txtNome);
@@ -94,31 +94,14 @@
             this.panel2.TabIndex = 21;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::MicroFix.Properties.Resources.errado;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(866, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(30, 25);
-            this.button1.TabIndex = 20;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // frmPesquisaMicroscopio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
             this.ClientSize = new System.Drawing.Size(908, 617);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPesquisaMicroscopio";
-            this.Text = "frmPesquisaMicroscopio";
             this.Load += new System.EventHandler(this.frmPesquisaMicroscopio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -133,7 +116,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel2;
     }
 }

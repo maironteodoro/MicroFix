@@ -47,13 +47,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cmbEmpresa = new System.Windows.Forms.ComboBox();
             this.cmbMicroscopio = new System.Windows.Forms.ComboBox();
-            this.button7 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.cmbFuncionario);
             this.panel2.Controls.Add(this.label4);
@@ -81,9 +80,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(122, 187);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(80, 16);
+            this.label7.Size = new System.Drawing.Size(86, 17);
             this.label7.TabIndex = 33;
             this.label7.Text = "Funcionario:";
             // 
@@ -100,6 +101,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(45, 318);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(159, 16);
@@ -172,6 +174,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(158, 254);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(45, 16);
@@ -181,6 +184,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(160, 294);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 16);
@@ -190,6 +194,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(108, 216);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 16);
@@ -223,6 +228,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(139, 114);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 16);
@@ -233,6 +239,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(126, 155);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 16);
@@ -259,31 +266,13 @@
             this.cmbMicroscopio.TabIndex = 29;
             this.cmbMicroscopio.SelectedIndexChanged += new System.EventHandler(this.cmbMicroscopio_SelectedIndexChanged);
             // 
-            // button7
-            // 
-            this.button7.BackgroundImage = global::MicroFix.Properties.Resources.errado;
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(866, 12);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(30, 25);
-            this.button7.TabIndex = 14;
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
             // frmFormulario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
             this.ClientSize = new System.Drawing.Size(908, 617);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.button7);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmFormulario";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmFormulario";
             this.Load += new System.EventHandler(this.frmFormulario_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -292,8 +281,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnPesquisa;

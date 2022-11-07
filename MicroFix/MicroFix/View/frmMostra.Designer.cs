@@ -28,42 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblDescricao = new System.Windows.Forms.Label();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.lbl4 = new System.Windows.Forms.Label();
             this.txt2 = new System.Windows.Forms.TextBox();
+            this.lbl5 = new System.Windows.Forms.Label();
+            this.lbl6 = new System.Windows.Forms.Label();
             this.txt3 = new System.Windows.Forms.TextBox();
+            this.lbl3 = new System.Windows.Forms.Label();
             this.txt4 = new System.Windows.Forms.TextBox();
+            this.lbl1 = new System.Windows.Forms.Label();
             this.txt5 = new System.Windows.Forms.TextBox();
+            this.lbl2 = new System.Windows.Forms.Label();
             this.txt6 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txt1 = new System.Windows.Forms.TextBox();
-            this.lbl4 = new System.Windows.Forms.Label();
-            this.lbl5 = new System.Windows.Forms.Label();
-            this.lbl6 = new System.Windows.Forms.Label();
-            this.lbl3 = new System.Windows.Forms.Label();
-            this.lbl1 = new System.Windows.Forms.Label();
-            this.lbl2 = new System.Windows.Forms.Label();
-            this.txtDescricao = new System.Windows.Forms.TextBox();
-            this.lblDescricao = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button2
-            // 
-            this.button2.BackgroundImage = global::MicroFix.Properties.Resources.errado;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(881, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(30, 25);
-            this.button2.TabIndex = 25;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
             this.panel2.Controls.Add(this.lblDescricao);
             this.panel2.Controls.Add(this.txtDescricao);
             this.panel2.Controls.Add(this.lbl4);
@@ -84,6 +70,41 @@
             this.panel2.Size = new System.Drawing.Size(504, 451);
             this.panel2.TabIndex = 26;
             // 
+            // lblDescricao
+            // 
+            this.lblDescricao.AutoSize = true;
+            this.lblDescricao.ForeColor = System.Drawing.Color.White;
+            this.lblDescricao.Location = new System.Drawing.Point(125, 260);
+            this.lblDescricao.Name = "lblDescricao";
+            this.lblDescricao.Size = new System.Drawing.Size(72, 16);
+            this.lblDescricao.TabIndex = 34;
+            this.lblDescricao.Text = "Descrição:";
+            this.lblDescricao.Visible = false;
+            // 
+            // txtDescricao
+            // 
+            this.txtDescricao.BackColor = System.Drawing.Color.White;
+            this.txtDescricao.Enabled = false;
+            this.txtDescricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescricao.Location = new System.Drawing.Point(148, 278);
+            this.txtDescricao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDescricao.Multiline = true;
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(194, 105);
+            this.txtDescricao.TabIndex = 33;
+            this.txtDescricao.Visible = false;
+            // 
+            // lbl4
+            // 
+            this.lbl4.AutoSize = true;
+            this.lbl4.ForeColor = System.Drawing.Color.White;
+            this.lbl4.Location = new System.Drawing.Point(111, 149);
+            this.lbl4.Name = "lbl4";
+            this.lbl4.Size = new System.Drawing.Size(44, 16);
+            this.lbl4.TabIndex = 32;
+            this.lbl4.Text = "Email:";
+            this.lbl4.Visible = false;
+            // 
             // txt2
             // 
             this.txt2.BackColor = System.Drawing.Color.White;
@@ -95,6 +116,28 @@
             this.txt2.Size = new System.Drawing.Size(179, 28);
             this.txt2.TabIndex = 24;
             this.txt2.Visible = false;
+            // 
+            // lbl5
+            // 
+            this.lbl5.AutoSize = true;
+            this.lbl5.ForeColor = System.Drawing.Color.White;
+            this.lbl5.Location = new System.Drawing.Point(7, 181);
+            this.lbl5.Name = "lbl5";
+            this.lbl5.Size = new System.Drawing.Size(150, 16);
+            this.lbl5.TabIndex = 31;
+            this.lbl5.Text = "Nome do Responsável:";
+            this.lbl5.Visible = false;
+            // 
+            // lbl6
+            // 
+            this.lbl6.AutoSize = true;
+            this.lbl6.ForeColor = System.Drawing.Color.White;
+            this.lbl6.Location = new System.Drawing.Point(92, 212);
+            this.lbl6.Name = "lbl6";
+            this.lbl6.Size = new System.Drawing.Size(64, 16);
+            this.lbl6.TabIndex = 30;
+            this.lbl6.Text = "Telefone:";
+            this.lbl6.Visible = false;
             // 
             // txt3
             // 
@@ -108,6 +151,17 @@
             this.txt3.TabIndex = 23;
             this.txt3.Visible = false;
             // 
+            // lbl3
+            // 
+            this.lbl3.AutoSize = true;
+            this.lbl3.ForeColor = System.Drawing.Color.White;
+            this.lbl3.Location = new System.Drawing.Point(109, 117);
+            this.lbl3.Name = "lbl3";
+            this.lbl3.Size = new System.Drawing.Size(45, 16);
+            this.lbl3.TabIndex = 29;
+            this.lbl3.Text = "CNPJ:";
+            this.lbl3.Visible = false;
+            // 
             // txt4
             // 
             this.txt4.BackColor = System.Drawing.Color.White;
@@ -120,6 +174,17 @@
             this.txt4.TabIndex = 22;
             this.txt4.Visible = false;
             // 
+            // lbl1
+            // 
+            this.lbl1.AutoSize = true;
+            this.lbl1.ForeColor = System.Drawing.Color.White;
+            this.lbl1.Location = new System.Drawing.Point(77, 52);
+            this.lbl1.Name = "lbl1";
+            this.lbl1.Size = new System.Drawing.Size(80, 16);
+            this.lbl1.TabIndex = 27;
+            this.lbl1.Text = "Funcionário:";
+            this.lbl1.Visible = false;
+            // 
             // txt5
             // 
             this.txt5.BackColor = System.Drawing.Color.White;
@@ -131,6 +196,18 @@
             this.txt5.Size = new System.Drawing.Size(179, 28);
             this.txt5.TabIndex = 21;
             this.txt5.Visible = false;
+            // 
+            // lbl2
+            // 
+            this.lbl2.AutoSize = true;
+            this.lbl2.ForeColor = System.Drawing.Color.White;
+            this.lbl2.Location = new System.Drawing.Point(112, 84);
+            this.lbl2.Name = "lbl2";
+            this.lbl2.Size = new System.Drawing.Size(42, 16);
+            this.lbl2.TabIndex = 28;
+            this.lbl2.Text = "Area: ";
+            this.lbl2.Visible = false;
+            this.lbl2.Click += new System.EventHandler(this.lbl2_Click);
             // 
             // txt6
             // 
@@ -166,102 +243,13 @@
             this.txt1.TabIndex = 14;
             this.txt1.Visible = false;
             // 
-            // lbl4
-            // 
-            this.lbl4.AutoSize = true;
-            this.lbl4.Location = new System.Drawing.Point(111, 149);
-            this.lbl4.Name = "lbl4";
-            this.lbl4.Size = new System.Drawing.Size(44, 16);
-            this.lbl4.TabIndex = 32;
-            this.lbl4.Text = "Email:";
-            this.lbl4.Visible = false;
-            // 
-            // lbl5
-            // 
-            this.lbl5.AutoSize = true;
-            this.lbl5.Location = new System.Drawing.Point(7, 181);
-            this.lbl5.Name = "lbl5";
-            this.lbl5.Size = new System.Drawing.Size(150, 16);
-            this.lbl5.TabIndex = 31;
-            this.lbl5.Text = "Nome do Responsável:";
-            this.lbl5.Visible = false;
-            // 
-            // lbl6
-            // 
-            this.lbl6.AutoSize = true;
-            this.lbl6.Location = new System.Drawing.Point(92, 212);
-            this.lbl6.Name = "lbl6";
-            this.lbl6.Size = new System.Drawing.Size(64, 16);
-            this.lbl6.TabIndex = 30;
-            this.lbl6.Text = "Telefone:";
-            this.lbl6.Visible = false;
-            // 
-            // lbl3
-            // 
-            this.lbl3.AutoSize = true;
-            this.lbl3.Location = new System.Drawing.Point(109, 117);
-            this.lbl3.Name = "lbl3";
-            this.lbl3.Size = new System.Drawing.Size(45, 16);
-            this.lbl3.TabIndex = 29;
-            this.lbl3.Text = "CNPJ:";
-            this.lbl3.Visible = false;
-            // 
-            // lbl1
-            // 
-            this.lbl1.AutoSize = true;
-            this.lbl1.Location = new System.Drawing.Point(77, 52);
-            this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(80, 16);
-            this.lbl1.TabIndex = 27;
-            this.lbl1.Text = "Funcionário:";
-            this.lbl1.Visible = false;
-            // 
-            // lbl2
-            // 
-            this.lbl2.AutoSize = true;
-            this.lbl2.Location = new System.Drawing.Point(112, 84);
-            this.lbl2.Name = "lbl2";
-            this.lbl2.Size = new System.Drawing.Size(42, 16);
-            this.lbl2.TabIndex = 28;
-            this.lbl2.Text = "Area: ";
-            this.lbl2.Visible = false;
-            this.lbl2.Click += new System.EventHandler(this.lbl2_Click);
-            // 
-            // txtDescricao
-            // 
-            this.txtDescricao.BackColor = System.Drawing.Color.White;
-            this.txtDescricao.Enabled = false;
-            this.txtDescricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescricao.Location = new System.Drawing.Point(148, 278);
-            this.txtDescricao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtDescricao.Multiline = true;
-            this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(194, 105);
-            this.txtDescricao.TabIndex = 33;
-            this.txtDescricao.Visible = false;
-            // 
-            // lblDescricao
-            // 
-            this.lblDescricao.AutoSize = true;
-            this.lblDescricao.Location = new System.Drawing.Point(125, 260);
-            this.lblDescricao.Name = "lblDescricao";
-            this.lblDescricao.Size = new System.Drawing.Size(72, 16);
-            this.lblDescricao.TabIndex = 34;
-            this.lblDescricao.Text = "Descrição:";
-            this.lblDescricao.Visible = false;
-            // 
             // frmMostra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
             this.ClientSize = new System.Drawing.Size(923, 664);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.button2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMostra";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmMostra";
             this.Load += new System.EventHandler(this.frmMostra_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -270,8 +258,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt1;

@@ -50,7 +50,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
             this.panel2.Controls.Add(this.btnSalvar);
             this.panel2.Controls.Add(this.btnPesquisa);
             this.panel2.Controls.Add(this.txtNumPatrimonio);
@@ -119,6 +119,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(143, 233);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 16);
@@ -128,6 +129,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(56, 270);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(140, 16);
@@ -137,6 +139,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(86, 189);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(110, 16);
@@ -200,6 +203,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(158, 112);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 16);
@@ -210,6 +214,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(148, 151);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 16);
@@ -245,15 +250,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
             this.ClientSize = new System.Drawing.Size(926, 664);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button7);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMicroscopio";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmMicroscopio";
             this.Load += new System.EventHandler(this.frmMicroscopio_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

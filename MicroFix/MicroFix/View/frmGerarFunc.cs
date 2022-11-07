@@ -13,7 +13,7 @@ using MicroFix.Repository;
 
 namespace MicroFix.View
 {
-    public partial class frmGerarFunc : Form
+    public partial class frmGerarFunc : MetroFramework.Forms.MetroForm
     {
         public frmGerarFunc()
         {

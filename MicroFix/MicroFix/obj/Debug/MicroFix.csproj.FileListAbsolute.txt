@@ -215,3 +215,4 @@ C:\Users\Soluxy\Desktop\MicroFix\MicroFix\MicroFix\MicroFix\obj\Debug\MicroFix.c
 C:\Users\Soluxy\Desktop\MicroFix\MicroFix\MicroFix\MicroFix\obj\Debug\MicroFix.csproj.CopyComplete
 C:\Users\Soluxy\Desktop\MicroFix\MicroFix\MicroFix\MicroFix\obj\Debug\MicroFix.exe
 C:\Users\Soluxy\Desktop\MicroFix\MicroFix\MicroFix\MicroFix\obj\Debug\MicroFix.pdb
+C:\Users\Soluxy\Documents\GitHub\MicroFix\MicroFix\MicroFix\obj\Debug\MicroFix.View.frmStatus.resources

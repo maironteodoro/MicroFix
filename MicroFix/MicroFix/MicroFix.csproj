@@ -402,6 +402,7 @@
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
     <Content Include="mongocrypt.dll" />
+    <None Include="Resources\list_add_user1.png" />
     <None Include="Resources\fds.png" />
     <None Include="Resources\errado.png" />
     <None Include="Resources\list_add_user.png" />

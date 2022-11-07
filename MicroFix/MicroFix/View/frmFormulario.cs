@@ -13,7 +13,7 @@ using MicroFix.View;
 
 namespace MicroFix.View
 {
-    public partial class frmFormulario : Form
+    public partial class frmFormulario : MetroFramework.Forms.MetroForm
     {
         public frmFormulario()
         {

@@ -12,7 +12,7 @@ using MicroFix.Repository;
 
 namespace MicroFix.View
 {
-    public partial class frmCadastrarFunc : Form
+    public partial class frmCadastrarFunc : MetroFramework.Forms.MetroForm
     {
 
         RFunc rf = new RFunc();

@@ -13,7 +13,7 @@ using MicroFix.View;
 
 namespace MicroFix
 {
-    public partial class frmLogin : Form
+    public partial class frmLogin : MetroFramework.Forms.MetroForm
     {
         public frmLogin()
         {
@@ -43,9 +43,11 @@ namespace MicroFix
         private void button1_Click(object sender, EventArgs e)
         {
             bool confirmacao = rf.Confirm(txtNome.Text,txtSenha.Text);
+            
             if (confirmacao==true)
             {
                 frmMenu frmM = new frmMenu();
+                this.Visible = false;
                 frmM.ShowDialog();
             }
             else
@@ -93,6 +95,16 @@ namespace MicroFix
         private void button1_Click_1(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void pictureBox1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 

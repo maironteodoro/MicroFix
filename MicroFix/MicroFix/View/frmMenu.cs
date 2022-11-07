@@ -12,7 +12,7 @@ using MicroFix.Repository;
 
 namespace MicroFix.View
 {
-    public partial class frmMenu : Form
+    public partial class frmMenu : MetroFramework.Forms.MetroForm
     {
         Funcionario f = new Funcionario();
         public frmMenu()
@@ -69,6 +69,11 @@ namespace MicroFix.View
         {
             frmBusca fb = new frmBusca();
             fb.ShowDialog();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
