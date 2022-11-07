@@ -34,11 +34,10 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.rbFormulário = new System.Windows.Forms.RadioButton();
             this.rbEmpresa = new System.Windows.Forms.RadioButton();
             this.rbMicroscopio = new System.Windows.Forms.RadioButton();
             this.rbFunc = new System.Windows.Forms.RadioButton();
-            this.rbFormulário = new System.Windows.Forms.RadioButton();
-            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -47,7 +46,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 136);
+            this.dataGridView1.Location = new System.Drawing.Point(58, 187);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -58,11 +57,11 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.btnBuscar);
             this.panel2.Controls.Add(this.txtNome);
-            this.panel2.Location = new System.Drawing.Point(12, 12);
+            this.panel2.Location = new System.Drawing.Point(58, 63);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(504, 118);
             this.panel2.TabIndex = 23;
@@ -73,6 +72,7 @@
             this.label1.AutoSize = true;
             this.label1.Enabled = false;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(141, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(32, 22);
@@ -104,19 +104,33 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
             this.panel1.Controls.Add(this.rbFormulário);
             this.panel1.Controls.Add(this.rbEmpresa);
             this.panel1.Controls.Add(this.rbMicroscopio);
             this.panel1.Controls.Add(this.rbFunc);
-            this.panel1.Location = new System.Drawing.Point(522, 12);
+            this.panel1.Location = new System.Drawing.Point(568, 63);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(266, 118);
             this.panel1.TabIndex = 24;
             // 
+            // rbFormulário
+            // 
+            this.rbFormulário.AutoSize = true;
+            this.rbFormulário.ForeColor = System.Drawing.Color.White;
+            this.rbFormulário.Location = new System.Drawing.Point(112, 15);
+            this.rbFormulário.Name = "rbFormulário";
+            this.rbFormulário.Size = new System.Drawing.Size(92, 20);
+            this.rbFormulário.TabIndex = 20;
+            this.rbFormulário.TabStop = true;
+            this.rbFormulário.Text = "Formulário";
+            this.rbFormulário.UseVisualStyleBackColor = true;
+            this.rbFormulário.CheckedChanged += new System.EventHandler(this.rbFormulário_CheckedChanged);
+            // 
             // rbEmpresa
             // 
             this.rbEmpresa.AutoSize = true;
+            this.rbEmpresa.ForeColor = System.Drawing.Color.White;
             this.rbEmpresa.Location = new System.Drawing.Point(3, 69);
             this.rbEmpresa.Name = "rbEmpresa";
             this.rbEmpresa.Size = new System.Drawing.Size(83, 20);
@@ -129,6 +143,7 @@
             // rbMicroscopio
             // 
             this.rbMicroscopio.AutoSize = true;
+            this.rbMicroscopio.ForeColor = System.Drawing.Color.White;
             this.rbMicroscopio.Location = new System.Drawing.Point(3, 40);
             this.rbMicroscopio.Name = "rbMicroscopio";
             this.rbMicroscopio.Size = new System.Drawing.Size(102, 20);
@@ -141,6 +156,7 @@
             // rbFunc
             // 
             this.rbFunc.AutoSize = true;
+            this.rbFunc.ForeColor = System.Drawing.Color.White;
             this.rbFunc.Location = new System.Drawing.Point(3, 15);
             this.rbFunc.Name = "rbFunc";
             this.rbFunc.Size = new System.Drawing.Size(98, 20);
@@ -150,45 +166,15 @@
             this.rbFunc.UseVisualStyleBackColor = true;
             this.rbFunc.CheckedChanged += new System.EventHandler(this.rbFunc_CheckedChanged);
             // 
-            // rbFormulário
-            // 
-            this.rbFormulário.AutoSize = true;
-            this.rbFormulário.Location = new System.Drawing.Point(112, 15);
-            this.rbFormulário.Name = "rbFormulário";
-            this.rbFormulário.Size = new System.Drawing.Size(92, 20);
-            this.rbFormulário.TabIndex = 20;
-            this.rbFormulário.TabStop = true;
-            this.rbFormulário.Text = "Formulário";
-            this.rbFormulário.UseVisualStyleBackColor = true;
-            this.rbFormulário.CheckedChanged += new System.EventHandler(this.rbFormulário_CheckedChanged);
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = global::MicroFix.Properties.Resources.errado;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(866, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(30, 25);
-            this.button2.TabIndex = 24;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // frmBusca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
             this.ClientSize = new System.Drawing.Size(923, 664);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmBusca";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmBusca";
             this.Load += new System.EventHandler(this.frmBusca_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -206,7 +192,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RadioButton rbFormulário;
         private System.Windows.Forms.RadioButton rbEmpresa;
