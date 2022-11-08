@@ -82,5 +82,21 @@ namespace MicroFix.Repository
             var db = cliente.GetDatabase("MicroFix");//conecta ao database
             return db.GetCollection<Funcionario>("Funcionario");//e escolhe a 
         }
+        public List<Funcionario> GetFuncByNameandSenha(string NomeFunc, string senha)// retorna um funcionario com o id especificado
+        {
+
+            var filtro = Builders<Funcionario>.Filter.Where(c => c.NomeFunc == NomeFunc && c.Senha == senha);
+
+            List<Funcionario> Funcionarios = ConnectToMongo<Funcionario>().Find<Funcionario>(filtro).ToList();
+            return Funcionarios;
+        }
+        public void AtualizarCargo(Funcionario f)//lembrar que IdFunc é string // Altera as infos de um Func
+        {
+            var filtro = Builders<Funcionario>.Filter.Where(c => c.IdFunc == f.IdFunc);
+            var alteracao = Builders<Funcionario>.Update.Set(c => c.NomeFunc, f.NomeFunc)
+                                                        .Set(c => c.Area, "Gerente")
+                                                        .Set(c => c.Senha, f.Senha);
+            ConnectToMongo<Funcionario>().UpdateMany(filtro, alteracao);
+        }
     }
 }

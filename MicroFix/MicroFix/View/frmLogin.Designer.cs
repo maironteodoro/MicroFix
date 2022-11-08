@@ -41,6 +41,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnInsta = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -208,11 +209,25 @@
             this.panel2.TabIndex = 8;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // btnInsta
+            // 
+            this.btnInsta.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnInsta.BackgroundImage")));
+            this.btnInsta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnInsta.FlatAppearance.BorderSize = 0;
+            this.btnInsta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInsta.Location = new System.Drawing.Point(96, 358);
+            this.btnInsta.Name = "btnInsta";
+            this.btnInsta.Size = new System.Drawing.Size(47, 48);
+            this.btnInsta.TabIndex = 11;
+            this.btnInsta.UseVisualStyleBackColor = true;
+            this.btnInsta.Click += new System.EventHandler(this.button1_Click_2);
+            // 
             // frmLogin
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1021, 429);
+            this.Controls.Add(this.btnInsta);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
@@ -244,6 +259,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnInsta;
     }
 }
 

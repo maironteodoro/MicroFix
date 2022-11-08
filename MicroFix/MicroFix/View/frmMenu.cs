@@ -15,6 +15,9 @@ namespace MicroFix.View
     public partial class frmMenu : MetroFramework.Forms.MetroForm
     {
         Funcionario f = new Funcionario();
+
+        internal Funcionario F { get => f; set => f = value; }
+
         public frmMenu()
         {
             InitializeComponent();
@@ -61,8 +64,16 @@ namespace MicroFix.View
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmGerarFunc fgf = new frmGerarFunc();
-            fgf.ShowDialog();
+            if (f.Area == "Gerente")
+            {
+                frmGerarFunc fgf = new frmGerarFunc();
+                fgf.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Acesso negado. Cargo incompatível", "Alerta!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            
         }
 
         private void button3_Click(object sender, EventArgs e)

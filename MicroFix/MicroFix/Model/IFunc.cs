@@ -20,6 +20,8 @@ namespace MicroFix.Model
 
         bool Confirm(string Nome, string senha); //Confirmação de funcionario
 
+        void AtualizarCargo(Funcionario f); // atualiza o cargo do funcionario
+
 
     }
 

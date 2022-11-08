@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using MicroFix.Model;
 using MicroFix.Repository;
 using MicroFix.View;
-
+using System.Diagnostics;
 namespace MicroFix
 {
     public partial class frmLogin : MetroFramework.Forms.MetroForm
@@ -43,10 +43,21 @@ namespace MicroFix
         private void button1_Click(object sender, EventArgs e)
         {
             bool confirmacao = rf.Confirm(txtNome.Text,txtSenha.Text);
-            
+            List<Funcionario> lf = new List<Funcionario>();
+            Funcionario f = new Funcionario();
             if (confirmacao==true)
             {
+                lf = rf.GetFuncByNameandSenha(txtNome.Text, txtSenha.Text);
+                foreach(var func in lf)
+                {
+                    if (func.Senha ==txtSenha.Text && func.NomeFunc == txtNome.Text)
+                    {
+                        f = func;
+                        break;
+                    }
+                }
                 frmMenu frmM = new frmMenu();
+                frmM.F = f;
                 this.Visible = false;
                 frmM.ShowDialog();
             }
@@ -105,6 +116,20 @@ namespace MicroFix
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            ProcessStartInfo sInfo = new ProcessStartInfo("https://www.instagram.com/absmicroscopia/");
+            Process.Start(sInfo);
+        
         }
     }
 
