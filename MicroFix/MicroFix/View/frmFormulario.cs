@@ -194,6 +194,7 @@ namespace MicroFix.View
             Microscopio m = new Microscopio();
              m= rm.GetMicroscopio(id);
             cmbMicroscopio.Text =m.NumSerie;
+            btnExcluir.Enabled = true;
 
         }
 

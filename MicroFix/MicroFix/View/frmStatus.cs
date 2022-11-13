@@ -60,5 +60,12 @@ namespace MicroFix.View
         {
             id = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
         }
+
+        private void btt_andamento_Click(object sender, EventArgs e)
+        {
+            rs.concluiStatus(id);
+            MessageBox.Show("Concluido com sucesso!!!");
+            dataGridView1.DataSource = rs.GetAllStatus();
+        }
     }
 }

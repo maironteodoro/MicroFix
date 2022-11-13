@@ -12,6 +12,7 @@ namespace MicroFix.Model
         void alteraStatus(Status s);
         void concluiStatus(int cod);
         void excluiStatus(Status s);
+        void AndamentoStatus(int cod);
         IEnumerable<Status> GetStatusByIdMicroscopio(int IdMicroscopio);
         IEnumerable<Status> GetStatusByIdServico(int IdServico);
         Status GetStatus(int id);

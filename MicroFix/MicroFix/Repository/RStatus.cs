@@ -189,5 +189,20 @@ namespace MicroFix.Repository
             cmd.ExecuteNonQuery();
             conn.Close();
         }
+
+        public void AndamentoStatus(int cod)
+        {
+            SqlConnection conn = new SqlConnection();
+            conn.ConnectionString = "Server =DESKTOP-0G0JKVA;Database=MicroFix;UID=mairon;PWD=123";
+            conn.Open();
+            string sql = $"Update Status set Status = 'Em andamento' where IdStatus = '{cod}'";
+
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.Connection = conn;
+            cmd.CommandText = sql;
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
     }
 }

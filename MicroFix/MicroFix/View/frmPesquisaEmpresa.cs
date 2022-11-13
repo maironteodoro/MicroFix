@@ -26,7 +26,6 @@ namespace MicroFix.View
 
         private void frmPesquisaEmpresa_Load(object sender, EventArgs e)
         {
-
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)

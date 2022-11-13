@@ -98,6 +98,7 @@ namespace MicroFix.View
             txtNomeResp.Text = emp.NomeResp;
             txtTelefone.Text = emp.Telefone;
             Flag = 3;
+            btnExcluir.Enabled = true;
             Habilita();
 
         }
