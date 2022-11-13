@@ -53,6 +53,7 @@ namespace MicroFix.View
 
         private void frmStatus_Load(object sender, EventArgs e)
         {
+            dataGridView1.Columns["IdStatus"].Visible = false;
             dataGridView1.DataSource = rs.GetAllStatus();
         }
 

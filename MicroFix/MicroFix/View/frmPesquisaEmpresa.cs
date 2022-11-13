@@ -26,6 +26,7 @@ namespace MicroFix.View
 
         private void frmPesquisaEmpresa_Load(object sender, EventArgs e)
         {
+            dataGridView1.Columns["IdEmpresa"].Visible = false;
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
