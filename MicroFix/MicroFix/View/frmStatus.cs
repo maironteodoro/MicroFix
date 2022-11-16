@@ -9,7 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MicroFix.Model;
-
+using ServiceStack;
+using System.Data.SqlClient;
 
 namespace MicroFix.View
 {
@@ -53,8 +54,22 @@ namespace MicroFix.View
 
         private void frmStatus_Load(object sender, EventArgs e)
         {
-            dataGridView1.Columns["IdStatus"].Visible = false;
+            //SqlConnection conn = new SqlConnection();
+            //conn.ConnectionString = "Server =DESKTOP-DTIFNMB\\SQLEXPRESS;Database=MicroFix;UID=ph;PWD=123";
+            //conn.Open();
+
+            //string sql = "Select * from dbo.StatusCorreto";
+
+            //using (SqlDataAdapter da = new SqlDataAdapter(sql, conn))
+            //{
+            //    using (DataTable dt = new DataTable())
+            //    {
+            //        da.Fill(dt);
+            //        dataGridView1.DataSource = dt;
+            //    }
+            //}
             dataGridView1.DataSource = rs.GetAllStatus();
+            dataGridView1.Columns["IdStatus"].Visible = false;
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -64,7 +79,7 @@ namespace MicroFix.View
 
         private void btt_andamento_Click(object sender, EventArgs e)
         {
-            rs.concluiStatus(id);
+            rs.AndamentoStatus(id);
             MessageBox.Show("Concluido com sucesso!!!");
             dataGridView1.DataSource = rs.GetAllStatus();
         }

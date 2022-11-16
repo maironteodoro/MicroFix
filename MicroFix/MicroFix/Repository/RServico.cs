@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MicroFix.Model;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace MicroFix.Repository
 {
@@ -13,7 +14,7 @@ namespace MicroFix.Repository
         public int adicionaServico(Servico se)
         {
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = "Server =DESKTOP-0G0JKVA;Database=MicroFix;UID=mairon;PWD=123";
+            conn.ConnectionString = "Server =DESKTOP-DTIFNMB\\SQLEXPRESS;Database=MicroFix;UID=ph;PWD=123";
             conn.Open();
             string sql = $"Insert into Servico(IdEmpresa, IdFunc,Descricao,Prazo,Valor,DataChegada) " +
                $"values ('{se.IdEmpresa} ', '{se.IdFunc}', '{se.Descricao} ', '{se.Prazo} ','{se.Valor} ','{se.DataChegada}')";
@@ -42,7 +43,7 @@ namespace MicroFix.Repository
         public void alteraServico(Servico se)
         {
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = "Server =DESKTOP-0G0JKVA;Database=MicroFix;UID=mairon;PWD=123";
+            conn.ConnectionString = "Server =DESKTOP-DTIFNMB\\SQLEXPRESS;Database=MicroFix;UID=ph;PWD=123";
             conn.Open();
             string sql = $"Update Servico set IdEmpresa = '{se.IdEmpresa}',IdFunc = '{se.IdFunc}',Descricao = '{se.Descricao}'," +
                 $"Prazo = '{se.Prazo}',Valor ='{se.Valor}',DataChegada = '{se.DataChegada}' where IdServico = {se.IdServico}";
@@ -57,7 +58,7 @@ namespace MicroFix.Repository
         public void excluiServico(Servico se)
         {
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = "Server =DESKTOP-0G0JKVA;Database=MicroFix;UID=mairon;PWD=123";
+            conn.ConnectionString = "Server =DESKTOP-DTIFNMB\\SQLEXPRESS;Database=MicroFix;UID=ph;PWD=123";
             conn.Open();
             string sql = $"Update Status set IdServico = null  where IdServico = {se.IdServico}";
 
@@ -78,7 +79,7 @@ namespace MicroFix.Repository
         public Servico GetServicoById(int id)
         {
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = "Server =DESKTOP-0G0JKVA;Database=MicroFix;UID=mairon;PWD=123";
+            conn.ConnectionString = "Server =DESKTOP-DTIFNMB\\SQLEXPRESS;Database=MicroFix;UID=ph;PWD=123";
             conn.Open();
 
             SqlCommand cmd = new SqlCommand();
@@ -103,7 +104,7 @@ namespace MicroFix.Repository
         public Servico GetServicoByMicroId(int id)
         {
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = "Server =DESKTOP-0G0JKVA;Database=MicroFix;UID=mairon;PWD=123";
+            conn.ConnectionString = "Server =DESKTOP-DTIFNMB\\SQLEXPRESS;Database=MicroFix;UID=ph;PWD=123";
             conn.Open();
 
             SqlCommand cmd = new SqlCommand();
@@ -130,7 +131,7 @@ namespace MicroFix.Repository
         public IEnumerable<Servico> GetAllServico()
         {
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = "Server =DESKTOP-0G0JKVA;Database=MicroFix;UID=mairon;PWD=123";
+            conn.ConnectionString = "Server =DESKTOP-DTIFNMB\\SQLEXPRESS;Database=MicroFix;UID=ph;PWD=123";
             conn.Open();
 
             SqlCommand cmd = new SqlCommand();
@@ -152,6 +153,6 @@ namespace MicroFix.Repository
                 ListaDadosServico.Add(se);
             }
             return ListaDadosServico;
-        }
+        }       
     }
 }

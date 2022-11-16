@@ -46,11 +46,12 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(58, 187);
+            this.dataGridView1.Location = new System.Drawing.Point(44, 152);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 421);
+            this.dataGridView1.Size = new System.Drawing.Size(582, 342);
             this.dataGridView1.TabIndex = 22;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
@@ -61,9 +62,10 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.btnBuscar);
             this.panel2.Controls.Add(this.txtNome);
-            this.panel2.Location = new System.Drawing.Point(58, 63);
+            this.panel2.Location = new System.Drawing.Point(44, 51);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(504, 118);
+            this.panel2.Size = new System.Drawing.Size(378, 96);
             this.panel2.TabIndex = 23;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -73,19 +75,20 @@
             this.label1.Enabled = false;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(141, 50);
+            this.label1.Location = new System.Drawing.Point(106, 41);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 22);
+            this.label1.Size = new System.Drawing.Size(26, 18);
             this.label1.TabIndex = 15;
             this.label1.Text = "ID:";
             // 
             // btnBuscar
             // 
             this.btnBuscar.Enabled = false;
-            this.btnBuscar.Location = new System.Drawing.Point(375, 40);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBuscar.Location = new System.Drawing.Point(281, 32);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(104, 49);
+            this.btnBuscar.Size = new System.Drawing.Size(78, 40);
             this.btnBuscar.TabIndex = 16;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -96,11 +99,12 @@
             this.txtNome.BackColor = System.Drawing.Color.White;
             this.txtNome.Enabled = false;
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(179, 48);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNome.Location = new System.Drawing.Point(134, 39);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(179, 28);
+            this.txtNome.Size = new System.Drawing.Size(135, 24);
             this.txtNome.TabIndex = 14;
+            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
             // panel1
             // 
@@ -109,18 +113,20 @@
             this.panel1.Controls.Add(this.rbEmpresa);
             this.panel1.Controls.Add(this.rbMicroscopio);
             this.panel1.Controls.Add(this.rbFunc);
-            this.panel1.Location = new System.Drawing.Point(568, 63);
+            this.panel1.Location = new System.Drawing.Point(426, 51);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(266, 118);
+            this.panel1.Size = new System.Drawing.Size(200, 96);
             this.panel1.TabIndex = 24;
             // 
             // rbFormulário
             // 
             this.rbFormulário.AutoSize = true;
             this.rbFormulário.ForeColor = System.Drawing.Color.White;
-            this.rbFormulário.Location = new System.Drawing.Point(112, 15);
+            this.rbFormulário.Location = new System.Drawing.Point(84, 12);
+            this.rbFormulário.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbFormulário.Name = "rbFormulário";
-            this.rbFormulário.Size = new System.Drawing.Size(92, 20);
+            this.rbFormulário.Size = new System.Drawing.Size(73, 17);
             this.rbFormulário.TabIndex = 20;
             this.rbFormulário.TabStop = true;
             this.rbFormulário.Text = "Formulário";
@@ -131,9 +137,10 @@
             // 
             this.rbEmpresa.AutoSize = true;
             this.rbEmpresa.ForeColor = System.Drawing.Color.White;
-            this.rbEmpresa.Location = new System.Drawing.Point(3, 69);
+            this.rbEmpresa.Location = new System.Drawing.Point(2, 56);
+            this.rbEmpresa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbEmpresa.Name = "rbEmpresa";
-            this.rbEmpresa.Size = new System.Drawing.Size(83, 20);
+            this.rbEmpresa.Size = new System.Drawing.Size(66, 17);
             this.rbEmpresa.TabIndex = 19;
             this.rbEmpresa.TabStop = true;
             this.rbEmpresa.Text = "Empresa";
@@ -144,9 +151,10 @@
             // 
             this.rbMicroscopio.AutoSize = true;
             this.rbMicroscopio.ForeColor = System.Drawing.Color.White;
-            this.rbMicroscopio.Location = new System.Drawing.Point(3, 40);
+            this.rbMicroscopio.Location = new System.Drawing.Point(2, 32);
+            this.rbMicroscopio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbMicroscopio.Name = "rbMicroscopio";
-            this.rbMicroscopio.Size = new System.Drawing.Size(102, 20);
+            this.rbMicroscopio.Size = new System.Drawing.Size(82, 17);
             this.rbMicroscopio.TabIndex = 18;
             this.rbMicroscopio.TabStop = true;
             this.rbMicroscopio.Text = "Microscópio";
@@ -157,9 +165,10 @@
             // 
             this.rbFunc.AutoSize = true;
             this.rbFunc.ForeColor = System.Drawing.Color.White;
-            this.rbFunc.Location = new System.Drawing.Point(3, 15);
+            this.rbFunc.Location = new System.Drawing.Point(2, 12);
+            this.rbFunc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbFunc.Name = "rbFunc";
-            this.rbFunc.Size = new System.Drawing.Size(98, 20);
+            this.rbFunc.Size = new System.Drawing.Size(80, 17);
             this.rbFunc.TabIndex = 17;
             this.rbFunc.TabStop = true;
             this.rbFunc.Text = "Funcionário";
@@ -168,13 +177,15 @@
             // 
             // frmBusca
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(923, 664);
+            this.ClientSize = new System.Drawing.Size(692, 540);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmBusca";
+            this.Padding = new System.Windows.Forms.Padding(15, 49, 15, 16);
             this.Style = MetroFramework.MetroColorStyle.Red;
             this.Load += new System.EventHandler(this.frmBusca_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

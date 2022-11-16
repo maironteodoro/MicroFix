@@ -13,7 +13,7 @@ namespace MicroFix.Repository
         public void adicionaMicro(Microscopio m)
         {
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = "Server =DESKTOP-0G0JKVA;Database=MicroFix;UID=mairon;PWD=123";
+            conn.ConnectionString = "Server =DESKTOP-DTIFNMB\\SQLEXPRESS;Database=MicroFix;UID=ph;PWD=123";
             conn.Open();
             string sql = $"Insert into Microscopio(Sala, Marca, NumSerie, Modelo, NumPatrimonio) " +
                 $"values ('{m.Sala}', '{m.Marca}', '{m.NumSerie}', '{m.Modelo}', '{m.NumPatrimonio}')";
@@ -27,7 +27,7 @@ namespace MicroFix.Repository
         public void alteraMicro(Microscopio m)
         {
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = "Server =DESKTOP-0G0JKVA;Database=MicroFix;UID=mairon;PWD=123";
+            conn.ConnectionString = "Server =DESKTOP-DTIFNMB\\SQLEXPRESS;Database=MicroFix;UID=ph;PWD=123";
             conn.Open();
             string sql = $"Update Microscopio set Sala = '{m.Sala}', Marca ='{m.Marca}', " +
                 $" NumSerie = '{m.NumSerie}',Modelo = '{m.Modelo}',NumPatrimonio = '{m.NumPatrimonio}' where IdMicroscopio = {m.IdMicroscopio}";
@@ -42,7 +42,7 @@ namespace MicroFix.Repository
         public void excluiMicro(Microscopio m)
         {
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = "Server =DESKTOP-0G0JKVA;Database=MicroFix;UID=mairon;PWD=123";
+            conn.ConnectionString = "Server =DESKTOP-DTIFNMB\\SQLEXPRESS;Database=MicroFix;UID=ph;PWD=123";
             conn.Open();
             string sql = $"Delete Microscopio where IdMicroscopio = {m.IdMicroscopio}";
 
@@ -56,7 +56,7 @@ namespace MicroFix.Repository
         public IEnumerable<Microscopio> Get(string pesquisa)
         {
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = "Server =DESKTOP-0G0JKVA;Database=MicroFix;UID=mairon;PWD=123";
+            conn.ConnectionString = "Server =DESKTOP-DTIFNMB\\SQLEXPRESS;Database=MicroFix;UID=ph;PWD=123";
             conn.Open();
 
             SqlCommand cmd = new SqlCommand();
@@ -81,7 +81,7 @@ namespace MicroFix.Repository
         public Microscopio GetMicroscopio(int id)
         {
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = "Server =DESKTOP-0G0JKVA;Database=MicroFix;UID=mairon;PWD=123";
+            conn.ConnectionString = "Server =DESKTOP-DTIFNMB\\SQLEXPRESS;Database=MicroFix;UID=ph;PWD=123";
             conn.Open();
 
             SqlCommand cmd = new SqlCommand();
@@ -105,7 +105,7 @@ namespace MicroFix.Repository
         public IEnumerable<Microscopio> GetAllMicroscopios()
         {
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = "Server =DESKTOP-0G0JKVA;Database=MicroFix;UID=mairon;PWD=123";
+            conn.ConnectionString = "Server =DESKTOP-DTIFNMB\\SQLEXPRESS;Database=MicroFix;UID=ph;PWD=123";
             conn.Open();
 
             SqlCommand cmd = new SqlCommand();

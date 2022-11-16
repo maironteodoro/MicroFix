@@ -46,6 +46,7 @@ namespace MicroFix.View
                     case 1://Funcionário
                         {   
                             dataGridView1.DataSource = rf.GetAllFunc();
+                            dataGridView1.Columns["IdFunc"].Visible = false;
                             dataGridView1.Columns["Senha"].Visible = false;
                             break;
                         }
@@ -53,16 +54,19 @@ namespace MicroFix.View
                         {
                             
                             dataGridView1.DataSource = rm.GetAllMicroscopios();
+                            dataGridView1.Columns["IdMicroscopio"].Visible = false;
                             break;
                         }
                     case 3://Empresa
                         { 
                             dataGridView1.DataSource = re.GetAllEmpresas();
+                            dataGridView1.Columns["IdEmpresa"].Visible = false;
                             break;
                         }
                     case 4://Formulário
                         {
                             dataGridView1.DataSource = rs.GetAllServico();
+                            dataGridView1.Columns["IdServico"].Visible = false;
                             break;
                         }
                 }
@@ -166,6 +170,11 @@ namespace MicroFix.View
                 fm.Id = Id;
             }
             fm.ShowDialog();
+        }
+
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

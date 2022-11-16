@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using MicroFix.Model;
 using System.Data.SqlClient;
+using System.Collections;
+using System.Data;
 
 namespace MicroFix.Repository
 {
@@ -13,7 +15,7 @@ namespace MicroFix.Repository
         public void adicionaStatus(Status s)
         {
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = "Server =DESKTOP-0G0JKVA;Database=MicroFix;UID=mairon;PWD=123";
+            conn.ConnectionString = "Server =DESKTOP-DTIFNMB\\SQLEXPRESS;Database=MicroFix;UID=ph;PWD=123";
             conn.Open();
             string sql = $"Insert into Status(IdMicroscopio, IdServico, Status,DescricaoProblema) " +
                 $"values ('{s.IdMicroscopio}', '{s.IdServico}', '{s.Estado}', '{s.DescricaoProblema}')";
@@ -27,7 +29,7 @@ namespace MicroFix.Repository
         public void alteraStatus(Status s)
         {
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = "Server =DESKTOP-0G0JKVA;Database=MicroFix;UID=mairon;PWD=123";
+            conn.ConnectionString = "Server =DESKTOP-DTIFNMB\\SQLEXPRESS;Database=MicroFix;UID=ph;PWD=123";
             conn.Open();
             string sql = $"Update Status set IdMicroscopio = '{s.IdMicroscopio}',IdServico = '{s.IdServico}', " +
                 $"Status ='{s.Estado}',DescricaoProblema = '{s.DescricaoProblema}' where IdStatus = {s.IdStatus}";
@@ -42,7 +44,7 @@ namespace MicroFix.Repository
         public void excluiStatus(Status s)
         {
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = "Server =DESKTOP-0G0JKVA;Database=MicroFix;UID=mairon;PWD=123";
+            conn.ConnectionString = "Server =DESKTOP-DTIFNMB\\SQLEXPRESS;Database=MicroFix;UID=ph;PWD=123";
             conn.Open();
             string sql = $"Delete Status where IdStatus = {s.IdStatus}";
 
@@ -56,7 +58,7 @@ namespace MicroFix.Repository
         public IEnumerable<Status> GetStatusByIdMicroscopio(int IdMicroscopio)
         {
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = "Server =DESKTOP-0G0JKVA;Database=MicroFix;UID=mairon;PWD=123";
+            conn.ConnectionString = "Server =DESKTOP-DTIFNMB\\SQLEXPRESS;Database=MicroFix;UID=ph;PWD=123";
             conn.Open();
 
             SqlCommand cmd = new SqlCommand();
@@ -80,7 +82,7 @@ namespace MicroFix.Repository
         public IEnumerable<Status> GetStatusByIdServico(int IdServico)
         {
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = "Server =DESKTOP-0G0JKVA;Database=MicroFix;UID=mairon;PWD=123";
+            conn.ConnectionString = "Server =DESKTOP-DTIFNMB\\SQLEXPRESS;Database=MicroFix;UID=ph;PWD=123";
             conn.Open();
 
             SqlCommand cmd = new SqlCommand();
@@ -104,7 +106,7 @@ namespace MicroFix.Repository
         public Status GetStatus(int id)
         {
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = "Server =DESKTOP-0G0JKVA;Database=MicroFix;UID=mairon;PWD=123";
+            conn.ConnectionString = "Server =DESKTOP-DTIFNMB\\SQLEXPRESS;Database=MicroFix;UID=ph;PWD=123";
             conn.Open();
 
             SqlCommand cmd = new SqlCommand();
@@ -127,7 +129,7 @@ namespace MicroFix.Repository
         public List<Status> GetStatusByNumSerie(int NumSerie)
         {
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = "Server =DESKTOP-0G0JKVA;Database=MicroFix;UID=mairon;PWD=123";
+            conn.ConnectionString = "Server =DESKTOP-DTIFNMB\\SQLEXPRESS;Database=MicroFix;UID=ph;PWD=123";
             conn.Open();
 
             SqlCommand cmd = new SqlCommand();
@@ -150,10 +152,11 @@ namespace MicroFix.Repository
             }
             return ListaDadosStatus;
         }
+
         public IEnumerable<Status> GetAllStatus()
         {
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = "Server =DESKTOP-0G0JKVA;Database=MicroFix;UID=mairon;PWD=123";
+            conn.ConnectionString = "Server =DESKTOP-DTIFNMB\\SQLEXPRESS;Database=MicroFix;UID=ph;PWD=123";
             conn.Open();
 
             SqlCommand cmd = new SqlCommand();
@@ -178,7 +181,7 @@ namespace MicroFix.Repository
         public void concluiStatus(int cod)
         {
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = "Server =DESKTOP-0G0JKVA;Database=MicroFix;UID=mairon;PWD=123";
+            conn.ConnectionString = "Server =DESKTOP-DTIFNMB\\SQLEXPRESS;Database=MicroFix;UID=ph;PWD=123";
             conn.Open();
             string sql = $"Update Status set Status = 'concluido' where IdStatus = '{cod}'";
 
@@ -193,9 +196,9 @@ namespace MicroFix.Repository
         public void AndamentoStatus(int cod)
         {
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = "Server =DESKTOP-0G0JKVA;Database=MicroFix;UID=mairon;PWD=123";
+            conn.ConnectionString = "Server =DESKTOP-DTIFNMB\\SQLEXPRESS;Database=MicroFix;UID=ph;PWD=123";
             conn.Open();
-            string sql = $"Update Status set Status = 'Em andamento' where IdStatus = '{cod}'";
+            string sql = $"Update Status set Status = 'Em manutenção' where IdStatus = '{cod}'";
 
             SqlCommand cmd = new SqlCommand();
 
@@ -203,6 +206,21 @@ namespace MicroFix.Repository
             cmd.CommandText = sql;
             cmd.ExecuteNonQuery();
             conn.Close();
+        }
+
+        public DataSet Get()
+        {
+            SqlConnection conn = new SqlConnection();
+            conn.ConnectionString = "Server =DESKTOP-DTIFNMB\\SQLEXPRESS;Database=MicroFix;UID=ph;PWD=123";
+            conn.Open();
+
+            string sql = "Select * from dbo.StatusCorreto";
+
+            SqlDataAdapter da = new SqlDataAdapter(sql, conn);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            conn.Close();
+            return ds;
         }
     }
 }

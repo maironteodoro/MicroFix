@@ -27,7 +27,6 @@ namespace MicroFix.View
 
         private void frmPesquisaMicroscopio_Load(object sender, EventArgs e)
         {
-            dataGridView1.Columns["IdStatus"].Visible = false;
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)

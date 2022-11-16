@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,5 +18,6 @@ namespace MicroFix.Model
         IEnumerable<Status> GetStatusByIdServico(int IdServico);
         Status GetStatus(int id);
         IEnumerable<Status> GetAllStatus();
+        DataSet Get();
     }
 }

@@ -113,7 +113,7 @@
             this.panel2.Controls.Add(this.txt_numero);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(52, 24);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(582, 96);
             this.panel2.TabIndex = 23;
@@ -125,7 +125,7 @@
             this.panel1.Controls.Add(this.btt_sair);
             this.panel1.Controls.Add(this.btt_concluir);
             this.panel1.Location = new System.Drawing.Point(52, 377);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(582, 96);
             this.panel1.TabIndex = 24;
@@ -137,7 +137,7 @@
             this.btt_andamento.Name = "btt_andamento";
             this.btt_andamento.Size = new System.Drawing.Size(176, 37);
             this.btt_andamento.TabIndex = 5;
-            this.btt_andamento.Text = "Em andamento";
+            this.btt_andamento.Text = "Em manutenção";
             this.btt_andamento.UseVisualStyleBackColor = true;
             this.btt_andamento.Click += new System.EventHandler(this.btt_andamento_Click);
             // 
@@ -150,7 +150,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dataGridView1);
             this.Name = "frmStatus";
-            this.Padding = new System.Windows.Forms.Padding(15, 49, 15, 16);
+            this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
             this.Style = MetroFramework.MetroColorStyle.Red;
             this.Load += new System.EventHandler(this.frmStatus_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
